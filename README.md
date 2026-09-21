@@ -38,14 +38,14 @@ The project features a warm coffee‑inspired palette, smooth interactions, and 
 
 ## Tech stack
 
-| Area | Tools |
-|------|--------|
-| Markup | HTML5 |
-| Styles | CSS3 (Flexbox, Grid, custom properties, transitions) |
-| Interactivity | Vanilla JavaScript (ES6+) |
-| Fonts | [Local .woff2 files] |
-| Assets | SVG icons, WebP images |
-| Deploy | GitHub Pages |
+| Area          | Tools                                                |
+|---------------|------------------------------------------------------|
+| Markup        | HTML5                                                |
+| Styles        | CSS3 (Flexbox, Grid, custom properties, transitions) |
+| Interactivity | Vanilla JavaScript (ES6+)                            |
+| Fonts         | [Local .woff2 files]                                 |
+| Assets        | SVG icons, WebP images                               |
+| Deploy        | GitHub Pages                                         |
 
 ## Project structure
 
@@ -67,8 +67,10 @@ rsschool-landing-page/
 │   ├── icons/              # SVG icons
 │   └── images/             # WebP project images
 ├── README.md
-├── README-part-1.md        # Part 1 description (markup & themes)
-├── README-part-2.md        # Part 2 description (interactivity)
+├── docs/
+│   ├── idea.jpg                # The image that inspired me for this project
+│   ├── README-part-1.md        # Part 1 description (markup & themes)
+│   ├── README-part-2.md        # Part 2 description (interactivity)
 └── .gitignore
 ```
 

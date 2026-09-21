@@ -1,5 +1,5 @@
-1. Task: [link](https://github.com/)
+1. Task: [link](https://github.com/rolling-scopes-school/tasks/tree/master/fullstack-engineering/tasks/landing-page)
 2. Screenshot:
-3. Deploy: [link](https://github.com/)
-4. Done 28.05.2020 / deadline 31.05.2020
-5. Score: 75 / 110
+3. Deploy: [link](https://theFoxTale.github.io/rsschool-landing-page/)
+4. Done 22.09.2026 / deadline 22.09.2026
+5. Score: 75 / 100
