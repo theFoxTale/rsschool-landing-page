@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning in a Cup</title>
+
+    <!-- Для современных браузеров (SVG) -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg">
+
+    <!-- Фолбэк для старых браузеров (ICO) -->
+    <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+
+    <!-- Для Apple устройств -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Хедер -->
+<header class="header">
+    <div class="container header__container">
+        <!-- Логотип -->
+        <a href="index.html" class="header__logo">
+            <img src="assets/logo.webp" alt="Morning in a Cup logo" class="header__logo-img">
+            <span class="header__logo-text">Morning in a Cup</span>
+        </a>
+
+        <!-- Навигация (на десктопе) -->
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#menu-section" class="nav__link">Menu</a></li>
+                <li class="nav__item"><a href="#about-section" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#beans-section" class="nav__link">Beans</a></li>
+                <li class="nav__item"><a href="#contacts-section" class="nav__link">Contacts</a></li>
+            </ul>
+        </nav>
+
+        <!-- Действия в хедере -->
+        <div class="header__actions">
+            <!-- Переключатель темы -->
+            <button class="theme-toggle" aria-label="Switch theme">
+                <img src="assets/icons/sun.svg" alt="" class="theme-toggle__icon theme-toggle__icon--light">
+                <img src="assets/icons/moon.svg" alt="" class="theme-toggle__icon theme-toggle__icon--dark">
+            </button>
+
+            <!-- Бургер-меню (для мобильных) -->
+            <button class="burger" aria-label="Open a menu" aria-expanded="false">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Основной контент -->
+<main class="main">
+    <!-- 1. Основная секция -->
+    <section id="about-section">
+    </section>
+
+    <!-- 2. Преимущества (4 колонки) -->
+    <section id="features-section">
+    </section>
+
+    <!-- 3. Популярные напитки (Слайдер) -->
+    <section id="menu-section">
+    </section>
+
+    <!-- 4. Рекомендуем попробовать (основное меню) -->
+    <section id="recommendations-section">
+    </section>
+
+
+    <!-- 5. Зёрна, которыми гордимся -->
+    <section id="beans-section">
+    </section>
+
+    <!-- 5. Зёрна, которыми гордимся -->
+    <section id="contacts-section">
+    </section>
+
+</main>
+
+<!-- Футер -->
+<footer class="footer">
+
+</footer>
+
+<!-- Подключение скриптов -->
+<script src="js/main.js"></script>
+</body>
+</html>

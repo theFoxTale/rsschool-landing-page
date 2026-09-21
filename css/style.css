@@ -1,0 +1,194 @@
+/* 1. Сброс стилей и переменные */
+:root {
+    /* Цвета из макета */
+    --color-bg-main: #F4F1EA; /* Светло-бежевый фон */
+    --color-bg-green: #8DA394; /* Зеленый блок */
+    --color-accent: #E87C4F; /* Оранжевая кнопка */
+    --color-text-dark: #2C2C2C;
+    --color-text-light: #FFFFFF;
+    --color-white: #FFFFFF;
+
+    /* Шрифты */
+    --font-main: 'Nunito', sans-serif;
+
+    /* Отступы */
+    --container-width: 1200px;
+    --header-height: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main), sans-serif;
+    background-color: var(--color-bg-main);
+    color: var(--color-text-dark);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+/* 2. Контейнер */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 3. Кнопки */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn--primary {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.btn--primary:hover {
+    background-color: #d16a3e;
+    transform: translateY(-2px);
+}
+
+.btn--secondary {
+    background-color: var(--color-white);
+    color: var(--color-text-dark);
+}
+
+/* 4. Хедер (Sticky) */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--color-bg-main);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+}
+
+/* Логотип */
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.header__logo-img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Навигация */
+.nav__list {
+    display: flex;
+    gap: 30px;
+}
+
+.nav__link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+    color: var(--color-accent);
+}
+
+/* Действия */
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Скрываем бургер на десктопе */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger__line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-text-dark);
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* 5. Медиа-запросы (Адаптивность) */
+
+/* Планшеты и меньше (768px и ниже) */
+@media (max-width: 768px) {
+    .header__nav {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .header__nav.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background-color: var(--color-bg-main);
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+/* Мобильные (380px и ниже) */
+@media (max-width: 380px) {
+    .header__logo-text {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
