@@ -157,6 +157,7 @@ button {
 .nav__link:hover,
 .nav__link--current {
     color: var(--color-link-hover);
+    font-weight: 900;
 }
 
 .nav__link_accent {
