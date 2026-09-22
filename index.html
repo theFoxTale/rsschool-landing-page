@@ -412,8 +412,38 @@
     </section>
 
     <!-- 5. Зёрна, которыми гордимся -->
-    <section id="contacts_section">
+    <section class="contacts" id="contacts_section" aria-labelledby="contacts-heading">
         <div class="container">
+            <div class="contacts__panel">
+                <div class="contacts__info">
+                    <h2 class="contacts__title" id="contacts-heading">Come and see us</h2>
+                    <address class="contacts__list">
+                        <p class="contacts__item">
+                            <svg class="contacts__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M12 21s6-5.2 6-10a6 6 0 1 0-12 0c0 4.8 6 10 6 10Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                                <circle cx="12" cy="11" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                            </svg>
+                            <a class="contacts__link" href="https://www.google.com/maps/search/?api=1&amp;query=Joybow%20Coffee%20%26%20Play%20Pafou%20Arch.%20Makarios%20III%20Avenue" target="_blank" rel="noopener noreferrer">Pafou &amp; Arch. Makarios III Avenue</a>
+                        </p>
+                        <p class="contacts__item">
+                            <svg class="contacts__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                                <path d="M12 8v4.5l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Daily, 08:00–21:00</span>
+                        </p>
+                        <p class="contacts__item">
+                            <svg class="contacts__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M8 4h3l1.5 4-2 1.2a11 11 0 0 0 4.3 4.3L16 12l4 1.5V17a2 2 0 0 1-2.2 2A14 14 0 0 1 5 6.2 2 2 0 0 1 7 4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                            </svg>
+                            <a class="contacts__link" href="tel:+15550100142">+1 555 010 0142</a>
+                        </p>
+                    </address>
+                </div>
+                <div class="contacts__map">
+                    <img class="contacts__image" src="assets/images/map.webp" alt="Map pin on Pafou at Arch. Makarios III Avenue, with a photo of the café" width="1152" height="1151" loading="lazy">
+                </div>
+            </div>
         </div>
     </section>
 </main>
