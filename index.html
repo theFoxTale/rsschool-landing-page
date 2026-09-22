@@ -30,10 +30,10 @@
         <!-- Навигация (на десктопе) -->
         <nav class="header__nav">
             <ul class="nav__list">
-                <li class="nav__item"><a href="#menu-section" class="nav__link">Menu</a></li>
-                <li class="nav__item"><a href="#about-section" class="nav__link">About</a></li>
-                <li class="nav__item"><a href="#beans-section" class="nav__link">Beans</a></li>
-                <li class="nav__item"><a href="#contacts-section" class="nav__link">Contacts</a></li>
+                <li class="nav__item"><a href="#coffee_section" class="nav__link">Menu</a></li>
+                <li class="nav__item"><a href="#about_section" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#beans_section" class="nav__link">Beans</a></li>
+                <li class="nav__item"><a href="#contacts_section" class="nav__link">Contacts</a></li>
             </ul>
         </nav>
 
@@ -58,30 +58,202 @@
 <!-- Основной контент -->
 <main class="main">
     <!-- 1. Основная секция -->
-    <section id="about-section">
+    <section id="about_section">
+        <div class="container">
+        </div>
     </section>
 
     <!-- 2. Преимущества (4 колонки) -->
-    <section id="features-section">
+    <section id="features_section">
+        <div class="container">
+        </div>
     </section>
 
     <!-- 3. Популярные напитки (Слайдер) -->
-    <section id="menu-section">
+    <section class="coffee" id="coffee_section" aria-labelledby="coffee-heading">
+        <div class="container">
+            <div class="coffee__panel">
+                <div class="coffee__intro">
+                    <h2 class="coffee__title" id="coffee-heading">Popular drinks</h2>
+                    <p class="coffee__lead">Classics and signature drinks for every taste.</p>
+                    <a class="btn btn--secondary" href="catalog.html">View full menu</a>
+                </div>
+
+                <div class="coffee__slider" data-coffee-slider aria-roledescription="carousel" aria-label="Popular drinks">
+                    <div class="coffee__viewport">
+                        <ul class="coffee__track">
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Matcha%20Latte.webp" alt="Matcha latte with leaf latte art, top view" width="1024" height="1024">
+                                    </div>
+                                    <h3 class="drink-card__title">Matcha Latte</h3>
+                                    <p class="drink-card__text">Green harmony</p>
+                                    <p class="drink-card__price">$4.80</p>
+                                </article>
+                            </li>
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Flat%20White.webp" alt="Flat white in a cup, top view" width="1024" height="1024" loading="lazy">
+                                    </div>
+                                    <h3 class="drink-card__title">Flat White</h3>
+                                    <p class="drink-card__text">Silky and bold</p>
+                                    <p class="drink-card__price">$4.20</p>
+                                </article>
+                            </li>
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Cappuccino.webp" alt="Cappuccino with cocoa on milk foam, top view" width="1024" height="1024" loading="lazy">
+                                    </div>
+                                    <h3 class="drink-card__title">Cappuccino</h3>
+                                    <p class="drink-card__text">Foamy and warm</p>
+                                    <p class="drink-card__price">$4.10</p>
+                                </article>
+                            </li>
+
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Classic%20Latte.webp" alt="Classic latte in a cup, top view" width="1024" height="1024">
+                                    </div>
+                                    <h3 class="drink-card__title">Classic Latte</h3>
+                                    <p class="drink-card__text">Smooth and creamy</p>
+                                    <p class="drink-card__price">$4.40</p>
+                                </article>
+                            </li>
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Espresso.webp" alt="Espresso in a red cup, top view" width="1024" height="1024" loading="lazy">
+                                    </div>
+                                    <h3 class="drink-card__title">Espresso</h3>
+                                    <p class="drink-card__text">Short and intense</p>
+                                    <p class="drink-card__price">$2.90</p>
+                                </article>
+                            </li>
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Mocha.webp" alt="Mocha in a cup, top view" width="1024" height="1024" loading="lazy">
+                                    </div>
+                                    <h3 class="drink-card__title">Mocha</h3>
+                                    <p class="drink-card__text">Cocoa and milk</p>
+                                    <p class="drink-card__price">$4.70</p>
+                                </article>
+                            </li>
+
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Cold%20Brew.webp" alt="Cold brew in a glass, top view" width="1024" height="1024" loading="lazy">
+                                    </div>
+                                    <h3 class="drink-card__title">Cold Brew</h3>
+                                    <p class="drink-card__text">Smooth and mellow</p>
+                                    <p class="drink-card__price">$4.30</p>
+                                </article>
+                            </li>
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Iced%20Latte.webp" alt="Iced latte in a glass, top view" width="1024" height="1024" loading="lazy">
+                                    </div>
+                                    <h3 class="drink-card__title">Iced Latte</h3>
+                                    <p class="drink-card__text">Cool and milky</p>
+                                    <p class="drink-card__price">$4.50</p>
+                                </article>
+                            </li>
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Iced%20Matcha%20Latte.webp" alt="Iced matcha latte in a glass, top view" width="1024" height="1024" loading="lazy">
+                                    </div>
+                                    <h3 class="drink-card__title">Iced Matcha Latte</h3>
+                                    <p class="drink-card__text">Iced and refreshing</p>
+                                    <p class="drink-card__price">$4.90</p>
+                                </article>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="coffee__controls">
+                        <button class="coffee__arrow coffee__arrow--prev" type="button" aria-label="Previous drinks">
+                            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                                <path d="M12.5 4.5 7 10l5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="coffee__dots" role="group" aria-label="Drink pages"></div>
+                        <button class="coffee__arrow coffee__arrow--next" type="button" aria-label="Next drinks">
+                            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                                <path d="M7.5 4.5 13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- 4. Рекомендуем попробовать (основное меню) -->
-    <section id="recommendations-section">
+    <section class="deserts" id="deserts_section" aria-labelledby="deserts-heading">
+        <div class="container deserts__container">
+            <h2 class="deserts__title" id="deserts-heading">Try this with your coffee</h2>
+            <div class="deserts__panel">
+                <article class="desert-card">
+                    <div class="desert-card__media">
+                        <img class="desert-card__image" src="assets/images/deserts/cupcake.webp" alt="Red velvet cupcakes topped with cream and fresh strawberries" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <div class="desert-card__description">
+                        <div class="desert-card__about_text">
+                            <h3 class="desert-card__title">Strawberry cupcake</h3>
+                            <p class="desert-card__text">Cream and fresh berries</p>
+                        </div>
+                        <p class="desert-card__price">$4.50</p>
+                    </div>
+                </article>
+
+                <article class="desert-card">
+                    <div class="desert-card__media">
+                        <img class="desert-card__image" src="assets/images/deserts/cookies.webp" alt="Pistachio cookies topped with raspberries and crushed nuts" width="1152" height="1152" loading="lazy">
+                    </div>
+                    <div class="desert-card__description">
+                        <div class="desert-card__about_text">
+                            <h3 class="desert-card__title">Pistachio cookies</h3>
+                            <p class="desert-card__text">Raspberry and pistachio in a breathtaking duet</p>
+                        </div>
+                        <p class="desert-card__price">$3.80</p>
+                    </div>
+                </article>
+
+                <article class="desert-card">
+                    <div class="desert-card__media">
+                        <img class="desert-card__image" src="assets/images/deserts/medovik.webp" alt="Slice of layered honey cake with a strawberry on top" width="1218" height="1218" loading="lazy">
+                    </div>
+                    <div class="desert-card__description">
+                        <div class="desert-card__about_text">
+                            <h3 class="desert-card__title">Honey cake</h3>
+                            <p class="desert-card__text">Soft honey layers with delicate strawberries on top</p>
+                        </div>
+                        <p class="desert-card__price">$5.20</p>
+                    </div>
+                </article>
+            </div>
+        </div>
     </section>
 
 
     <!-- 5. Зёрна, которыми гордимся -->
-    <section id="beans-section">
+    <section id="beans_section">
+        <div class="container">
+        </div>
     </section>
 
     <!-- 5. Зёрна, которыми гордимся -->
-    <section id="contacts-section">
+    <section id="contacts_section">
+        <div class="container">
+        </div>
     </section>
-
 </main>
 
 <!-- Футер -->
