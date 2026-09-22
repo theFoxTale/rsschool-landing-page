@@ -159,6 +159,11 @@ button {
     color: var(--color-link-hover);
 }
 
+.nav__link_accent {
+    color: var(--color-panel);
+    font-weight: 900;
+}
+
 /* Действия */
 .header__actions {
     display: flex;
