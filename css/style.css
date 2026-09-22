@@ -4,10 +4,16 @@
     --color-bg-main: #F4F1EA; /* Светло-бежевый фон */
     --color-bg-green: #DCE3DE; /* Зеленый блок */
     --color-panel: #5F7D6C; /* Панель напитков */
+    --color-sage: #5F7D6C; /* Иконки и цены */
     --color-accent: #E87C4F; /* Оранжевая кнопка */
+    --color-accent-hover: #d16a3e;
+    --color-link-hover: #E87C4F;
     --color-text-dark: #2C2C2C;
     --color-text-light: #F4F1EA;
     --color-white: #FFFFFF;
+    --color-surface: #FFFFFF;
+    --color-line: rgba(95, 125, 108, 0.45);
+    --color-card-line: rgba(141, 163, 148, 0.7);
 
     /* Шрифты */
     --font-main: 'Nunito', sans-serif;
@@ -15,6 +21,23 @@
     /* Отступы */
     --container-width: 1200px;
     --header-height: 80px;
+    color-scheme: light;
+}
+
+html[data-theme="dark"] {
+    --color-bg-main: #171E1B;
+    --color-bg-green: #9A9E9B;
+    --color-panel: #3E5649;
+    --color-sage: #C5DDD2;
+    --color-accent: #E07A48;
+    --color-accent-hover: #C86438;
+    --color-link-hover: #FFC2A2;
+    --color-text-dark: #F4F1EA;
+    --color-text-light: #F4F1EA;
+    --color-surface: #2A342F;
+    --color-line: rgba(197, 221, 210, 0.4);
+    --color-card-line: rgba(197, 221, 210, 0.28);
+    color-scheme: dark;
 }
 
 * {
@@ -75,12 +98,12 @@ button {
 }
 
 .btn--primary:hover {
-    background-color: #d16a3e;
+    background-color: var(--color-accent-hover);
     transform: translateY(-2px);
 }
 
 .btn--secondary {
-    background-color: var(--color-white);
+    background-color: var(--color-surface);
     color: var(--color-text-dark);
 }
 
@@ -133,7 +156,7 @@ button {
 
 .nav__link:hover,
 .nav__link--current {
-    color: var(--color-accent);
+    color: var(--color-link-hover);
 }
 
 /* Действия */
@@ -156,6 +179,35 @@ button {
     background-color: var(--color-text-dark);
     border-radius: 2px;
     transition: 0.3s;
+}
+
+.theme-toggle {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--color-text-dark);
+}
+
+.theme-toggle:hover {
+    color: var(--color-link-hover);
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+.theme-toggle__icon {
+    width: 22px;
+    height: 22px;
+    grid-area: 1 / 1;
+}
+
+html:not([data-theme="dark"]) .theme-toggle__icon--dark,
+html[data-theme="dark"] .theme-toggle__icon--light {
+    display: none;
 }
 
 /* 5. Медиа-запросы (Адаптивность) */
@@ -316,7 +368,7 @@ button {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background-color: var(--color-white);
+    background-color: var(--color-surface);
     color: var(--color-text-dark);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -528,7 +580,7 @@ button {
     width: 40px;
     height: 40px;
     margin-bottom: 6px;
-    color: var(--color-panel);
+    color: var(--color-sage);
 }
 
 .features__title {
@@ -597,7 +649,7 @@ button {
     gap: 14px;
     align-items: center;
     min-width: 0;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--color-surface);
     border-radius: 20px;
     padding: 12px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.35s ease;
@@ -658,7 +710,7 @@ button {
     font-size: 0.95rem;
     align-self: flex-end;
     user-select: none;
-    color: var(--color-panel);
+    color: var(--color-sage);
 }
 
 @media (max-width: 900px) {
@@ -750,7 +802,7 @@ button {
     gap: 14px;
     align-items: center;
     padding: 14px 16px;
-    background-color: var(--color-white);
+    background-color: var(--color-surface);
     border-radius: 16px;
     transition: box-shadow 0.3s ease;
 }
@@ -762,7 +814,7 @@ button {
 .beans__icon {
     width: 40px;
     height: 40px;
-    color: var(--color-panel);
+    color: var(--color-sage);
 }
 
 .beans__label {
@@ -836,7 +888,7 @@ button {
 .contacts__icon {
     width: 28px;
     height: 28px;
-    color: var(--color-panel);
+    color: var(--color-sage);
 }
 
 .contacts__link {
@@ -845,7 +897,7 @@ button {
 }
 
 .contacts__link:hover {
-    color: var(--color-accent);
+    color: var(--color-link-hover);
 }
 
 .contacts__link:focus-visible {
@@ -947,7 +999,7 @@ button {
 }
 
 .footer__link:hover {
-    color: var(--color-accent);
+    color: var(--color-link-hover);
 }
 
 .footer__link:focus-visible,

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu — Morning in a Cup</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+
+    <script>
+        (function () {
+            var theme = 'light';
+            try {
+                if (localStorage.getItem('theme') === 'dark') {
+                    theme = 'dark';
+                }
+            } catch (error) {
+                theme = 'light';
+            }
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/catalog.css">
+</head>
+<body>
+<header class="header">
+    <div class="container header__container">
+        <a href="index.html" class="header__logo">
+            <img src="assets/logo.webp" alt="Morning in a Cup logo" class="header__logo-img">
+            <span class="header__logo-text">Morning in a Cup</span>
+        </a>
+
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html#coffee_section" class="nav__link">Menu</a></li>
+                <li class="nav__item"><a href="index.html#about_section" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="index.html#beans_section" class="nav__link">Beans</a></li>
+                <li class="nav__item"><a href="index.html#contacts_section" class="nav__link">Contacts</a></li>
+                <li class="nav__item"><a href="catalog.html" class="nav__link nav__link--current" aria-current="page">Catalog</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__actions">
+            <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+                <svg class="theme-toggle__icon theme-toggle__icon--light" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M12 2.5v2.2M12 19.3v2.2M4.8 4.8l1.6 1.6M17.6 17.6l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.8 19.2l1.6-1.6M17.6 6.4l1.6-1.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+                <svg class="theme-toggle__icon theme-toggle__icon--dark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 14.2A6.5 6.5 0 0 1 9.2 5.2 7 7 0 1 0 18.8 14.8a6.5 6.5 0 0 1-3.3-.6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <button class="burger" aria-label="Open a menu" aria-expanded="false">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <section class="catalog" id="catalog" data-catalog aria-labelledby="catalog-heading">
+        <div class="container">
+            <h1 class="catalog__title" id="catalog-heading">Menu</h1>
+            <p class="catalog__lead">Coffee, cakes, and pastry baked for a slow morning.</p>
+
+            <div class="catalog__filters" role="group" aria-label="Menu categories">
+                <button class="catalog__filter is-active" type="button" data-category-button="coffee" aria-pressed="true">Coffee</button>
+                <button class="catalog__filter" type="button" data-category-button="cakes" aria-pressed="false">Cakes</button>
+                <button class="catalog__filter" type="button" data-category-button="pastry" aria-pressed="false">Pastry</button>
+            </div>
+
+            <div class="catalog__grid">
+                <article class="menu-card" data-category="coffee">
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/coffee/Matcha%20Latte.webp" alt="Matcha latte with leaf latte art, top view" width="1024" height="1024">
+                    </div>
+                    <h2 class="menu-card__title">Matcha Latte</h2>
+                    <p class="menu-card__text">Green harmony</p>
+                    <p class="menu-card__price">$4.80</p>
+                </article>
+                <article class="menu-card" data-category="coffee">
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/coffee/Flat%20White.webp" alt="Flat white in a cup, top view" width="1024" height="1024">
+                    </div>
+                    <h2 class="menu-card__title">Flat White</h2>
+                    <p class="menu-card__text">Silky and bold</p>
+                    <p class="menu-card__price">$4.20</p>
+                </article>
+                <article class="menu-card" data-category="coffee">
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/coffee/Cappuccino.webp" alt="Cappuccino with cocoa on milk foam, top view" width="1024" height="1024">
+                    </div>
+                    <h2 class="menu-card__title">Cappuccino</h2>
+                    <p class="menu-card__text">Foamy and warm</p>
+                    <p class="menu-card__price">$4.10</p>
+                </article>
+                <article class="menu-card" data-category="coffee">
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/coffee/Classic%20Latte.webp" alt="Classic latte in a cup, top view" width="1024" height="1024">
+                    </div>
+                    <h2 class="menu-card__title">Classic Latte</h2>
+                    <p class="menu-card__text">Smooth and creamy</p>
+                    <p class="menu-card__price">$4.40</p>
+                </article>
+                <article class="menu-card" data-category="coffee">
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/coffee/Espresso.webp" alt="Espresso in a red cup, top view" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Espresso</h2>
+                    <p class="menu-card__text">Short and intense</p>
+                    <p class="menu-card__price">$2.90</p>
+                </article>
+                <article class="menu-card" data-category="coffee">
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/coffee/Mocha.webp" alt="Mocha in a cup, top view" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Mocha</h2>
+                    <p class="menu-card__text">Cocoa and milk</p>
+                    <p class="menu-card__price">$4.70</p>
+                </article>
+                <article class="menu-card" data-category="coffee">
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/coffee/Cold%20Brew.webp" alt="Cold brew in a glass, top view" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Cold Brew</h2>
+                    <p class="menu-card__text">Smooth and mellow</p>
+                    <p class="menu-card__price">$4.30</p>
+                </article>
+                <article class="menu-card" data-category="coffee">
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/coffee/Iced%20Latte.webp" alt="Iced latte in a glass, top view" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Iced Latte</h2>
+                    <p class="menu-card__text">Cool and milky</p>
+                    <p class="menu-card__price">$4.50</p>
+                </article>
+                <article class="menu-card" data-category="coffee" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/coffee/Iced%20Matcha%20Latte.webp" alt="Iced matcha latte in a glass, top view" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Iced Matcha Latte</h2>
+                    <p class="menu-card__text">Iced and refreshing</p>
+                    <p class="menu-card__price">$4.90</p>
+                </article>
+                <article class="menu-card" data-category="coffee" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/coffee/Filter.webp" alt="Filter coffee with ice in a blue cup, top view" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Filter</h2>
+                    <p class="menu-card__text">Bright and light</p>
+                    <p class="menu-card__price">$3.60</p>
+                </article>
+
+                <article class="menu-card" data-category="cakes" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/medovik.webp" alt="Slice of layered honey cake with a strawberry on top" width="1218" height="1218" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Honey cake</h2>
+                    <p class="menu-card__text">Soft honey layers</p>
+                    <p class="menu-card__price">$5.20</p>
+                </article>
+                <article class="menu-card" data-category="cakes" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/napoleon.webp" alt="Napoleon cake" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Napoleon</h2>
+                    <p class="menu-card__text">Flaky layers and custard</p>
+                    <p class="menu-card__price">$5.40</p>
+                </article>
+                <article class="menu-card" data-category="cakes" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/tiramisu.webp" alt="Tiramisu" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Tiramisu</h2>
+                    <p class="menu-card__text">Coffee, cream, and cocoa</p>
+                    <p class="menu-card__price">$5.60</p>
+                </article>
+                <article class="menu-card" data-category="cakes" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/mango_cake.webp" alt="Mango cake" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Mango cake</h2>
+                    <p class="menu-card__text">Sponge and ripe mango</p>
+                    <p class="menu-card__price">$5.50</p>
+                </article>
+                <article class="menu-card" data-category="cakes" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/nuts_cake.webp" alt="Nut cake" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Nut cake</h2>
+                    <p class="menu-card__text">Toasted nuts and cream</p>
+                    <p class="menu-card__price">$5.30</p>
+                </article>
+                <article class="menu-card" data-category="cakes" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/pumpkin.webp" alt="Pumpkin cake" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Pumpkin cake</h2>
+                    <p class="menu-card__text">Warm spice and cream</p>
+                    <p class="menu-card__price">$5.10</p>
+                </article>
+                <article class="menu-card" data-category="cakes" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/milfei.webp" alt="Mille-feuille with cream and raspberries" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Mille-feuille</h2>
+                    <p class="menu-card__text">Pastry, cream, and raspberries</p>
+                    <p class="menu-card__price">$5.40</p>
+                </article>
+                <article class="menu-card" data-category="cakes" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/pavlova.webp" alt="Pavlova" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Pavlova</h2>
+                    <p class="menu-card__text">Crisp meringue and berries</p>
+                    <p class="menu-card__price">$5.00</p>
+                </article>
+                <article class="menu-card" data-category="cakes" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/freze.webp" alt="Slice of strawberry cream cake" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Strawberry cake</h2>
+                    <p class="menu-card__text">Sponge, cream, and berries</p>
+                    <p class="menu-card__price">$5.20</p>
+                </article>
+
+                <article class="menu-card" data-category="pastry" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/cupcake.webp" alt="Red velvet cupcakes topped with cream and fresh strawberries" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Strawberry cupcake</h2>
+                    <p class="menu-card__text">Cream and fresh berries</p>
+                    <p class="menu-card__price">$4.50</p>
+                </article>
+                <article class="menu-card" data-category="pastry" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/lemon_cupcake.webp" alt="Lemon cupcake" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Lemon cupcake</h2>
+                    <p class="menu-card__text">Bright citrus sponge</p>
+                    <p class="menu-card__price">$4.20</p>
+                </article>
+                <article class="menu-card" data-category="pastry" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/shoko_cupcaje.webp" alt="Chocolate cupcake" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Chocolate cupcake</h2>
+                    <p class="menu-card__text">Cocoa sponge and cream</p>
+                    <p class="menu-card__price">$4.40</p>
+                </article>
+                <article class="menu-card" data-category="pastry" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/cookies.webp" alt="Pistachio cookies topped with raspberries and crushed nuts" width="1152" height="1152" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Pistachio cookies</h2>
+                    <p class="menu-card__text">Raspberry and pistachio</p>
+                    <p class="menu-card__price">$3.80</p>
+                </article>
+                <article class="menu-card" data-category="pastry" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/macaroons.webp" alt="Macarons" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Macarons</h2>
+                    <p class="menu-card__text">Light shells and ganache</p>
+                    <p class="menu-card__price">$4.60</p>
+                </article>
+                <article class="menu-card" data-category="pastry" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/korzhiki.webp" alt="Shortbread cookies" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Shortbread</h2>
+                    <p class="menu-card__text">Buttery and crumbly</p>
+                    <p class="menu-card__price">$3.40</p>
+                </article>
+                <article class="menu-card" data-category="pastry" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/profitroli.webp" alt="Profiteroles" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Profiteroles</h2>
+                    <p class="menu-card__text">Choux buns with cream</p>
+                    <p class="menu-card__price">$4.80</p>
+                </article>
+                <article class="menu-card" data-category="pastry" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/trubochki.webp" alt="Wafer rolls" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Wafer rolls</h2>
+                    <p class="menu-card__text">Crisp tubes with filling</p>
+                    <p class="menu-card__price">$3.90</p>
+                </article>
+                <article class="menu-card" data-category="pastry" hidden>
+                    <div class="menu-card__media">
+                        <img class="menu-card__image" src="assets/images/deserts/zefir.webp" alt="Zephyr" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <h2 class="menu-card__title">Zephyr</h2>
+                    <p class="menu-card__text">Soft fruit meringue</p>
+                    <p class="menu-card__price">$3.70</p>
+                </article>
+            </div>
+
+            <div class="catalog__more-wrap" data-show-more-wrap>
+                <button class="btn btn--primary catalog__more" type="button" data-show-more>Show more</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__brand">
+            <a class="footer__logo" href="index.html">
+                <img class="footer__logo-img" src="assets/logo.webp" alt="" width="40" height="40">
+                <span>Morning in a Cup</span>
+            </a>
+            <p class="footer__tagline">Specialty coffee, fresh pastry, and a quiet corner in the city.</p>
+        </div>
+
+        <address class="footer__contacts">
+            <p class="footer__label">Come and see us</p>
+            <a class="footer__link" href="https://www.google.com/maps/search/?api=1&amp;query=Joybow%20Coffee%20%26%20Play%20Pafou%20Arch.%20Makarios%20III%20Avenue" target="_blank" rel="noopener noreferrer">Pafou &amp; Arch. Makarios III Avenue</a>
+            <a class="footer__link" href="tel:+15550100142">+1 555 010 0142</a>
+            <p>Daily, 08:00–21:00</p>
+        </address>
+
+        <div class="footer__author">
+            <p class="footer__label">Author</p>
+            <ul class="footer__links">
+                <li><a class="footer__link" href="https://github.com/theFoxTale/rsschool-landing-page" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a class="footer__link" href="https://t.me/annie_in_life" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+                <li><a class="footer__link" href="mailto:makarenkoanna@yandex.ru">makarenkoanna@yandex.ru</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <p class="footer__copy">© 2026 Morning in a Cup. Educational project for <a class="footer__link" href="https://rs.school/courses/fullstack-engineering" target="_blank" rel="noopener noreferrer">RS School</a> Fullstack Engineering.</p>
+    </div>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/catalog.js"></script>
+</body>
+</html>
