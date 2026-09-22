@@ -517,7 +517,7 @@ html[data-theme="dark"] .theme-toggle__icon--light {
     height: 18px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .about__container {
         grid-template-columns: 1fr;
         gap: 28px;
