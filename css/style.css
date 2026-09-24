@@ -46,6 +46,11 @@ html[data-theme="dark"] {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+}
+
 body {
     font-family: var(--font-main), sans-serif;
     background-color: var(--color-bg-main);
