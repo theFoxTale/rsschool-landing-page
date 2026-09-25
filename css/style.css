@@ -165,7 +165,7 @@ button {
     font-weight: 900;
 }
 
-.nav__link_accent {
+.nav__link--accent {
     color: var(--color-panel);
     font-weight: 900;
 }
@@ -687,7 +687,7 @@ html[data-theme="dark"] .theme-toggle__icon--light {
     transform: scale(1.05);
 }
 
-.desert-card__about_text {
+.desert-card__about-text {
     display: flex;
     flex-direction: column;
     gap: 4px;
