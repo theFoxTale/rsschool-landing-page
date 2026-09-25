@@ -1,3 +1,5 @@
+import '../scss/pages/_catalog.scss';
+
 let rootElement;
 
 let buttons;

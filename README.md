@@ -54,9 +54,15 @@ rsschool-landing-page/
 ├── .github/workflows/      # CI: deploy to GitHub Pages
 ├── index.html              # Home page
 ├── catalog.html            # Menu / Catalog page
-├── css/
-│   ├── style.css           # Main styles
-│   └── ...
+├── scss/                   # 7-1 SCSS, compiled by Vite
+│   ├── main.scss
+│   ├── abstracts/
+│   ├── base/
+│   ├── components/
+│   ├── layout/
+│   ├── pages/
+│   ├── themes/
+│   └── vendors/
 ├── js/
 │   ├── main.js             # Theme toggle, burger menu, smooth scroll
 │   ├── slider.js           # Custom carousel

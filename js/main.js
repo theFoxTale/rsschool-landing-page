@@ -1,3 +1,5 @@
+import '../scss/main.scss';
+
 const STORAGE_KEY = 'coffee_morning_in_cup_theme';
 let toggle;
 
