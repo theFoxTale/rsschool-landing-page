@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning in a Cup</title>
+
+    <!-- Для современных браузеров (SVG) -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg">
+
+    <!-- Фолбэк для старых браузеров (ICO) -->
+    <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+
+    <!-- Для Apple устройств -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+
+    <script>
+        (function () {
+            var theme = 'light';
+            try {
+                if (localStorage.getItem('theme') === 'dark') {
+                    theme = 'dark';
+                }
+            } catch (error) {
+                theme = 'light';
+            }
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+<!-- Хедер -->
+<header class="header">
+    <div class="container header__container">
+        <!-- Логотип -->
+        <a href="index.html" class="header__logo">
+            <img src="assets/logo.webp" alt="Morning in a Cup logo" class="header__logo-img">
+            <span class="header__logo-text">Morning in a Cup</span>
+        </a>
+
+        <!-- Навигация (на десктопе) -->
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#coffee_section" class="nav__link">Coffee</a></li>
+                <li class="nav__item"><a href="#deserts_section" class="nav__link">Deserts</a></li>
+                <li class="nav__item"><a href="#beans_section" class="nav__link">Beans</a></li>
+                <li class="nav__item"><a href="#contacts_section" class="nav__link">Contacts</a></li>
+                <li class="nav__item"><a href="#about_section" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="catalog.html" class="nav__link nav__link--accent">Catalog</a></li>
+            </ul>
+        </nav>
+
+        <!-- Действия в хедере -->
+        <div class="header__actions">
+            <!-- Переключатель темы -->
+            <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+                <svg class="theme-toggle__icon theme-toggle__icon--light" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M12 2.5v2.2M12 19.3v2.2M4.8 4.8l1.6 1.6M17.6 17.6l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.8 19.2l1.6-1.6M17.6 6.4l1.6-1.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+                <svg class="theme-toggle__icon theme-toggle__icon--dark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M15.5 14.2A6.5 6.5 0 0 1 9.2 5.2 7 7 0 1 0 18.8 14.8a6.5 6.5 0 0 1-3.3-.6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <!-- Бургер-меню (для мобильных) -->
+            <button class="burger" aria-label="Open a menu" aria-expanded="false">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Основной контент -->
+<main class="main">
+    <!-- 1. Основная секция -->
+    <section class="about" id="about_section" aria-labelledby="about-heading">
+        <div class="container">
+            <div class="about__container">
+                <div class="about__content">
+                    <h1 class="about__title" id="about-heading">Coffee you'll love from the first sip</h1>
+                    <p class="about__lead">Specialty coffee, fresh pastry, and a quiet corner in the heart of the city.</p>
+                    <a class="btn btn--primary" href="catalog.html">View the menu</a>
+                </div>
+                <div class="about__media">
+                    <img class="about__image" src="assets/images/hero-coffee.jpg" alt="Latte with leaf art and a croissant on a speckled plate" width="1152" height="864">
+                    <p class="about__badge">
+                        <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                            <path d="M10 16C10 11 7.2 8 3 7c.6 5.4 3.4 8.4 7 9Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                            <path d="M10 16c0-5 2.8-8 7-9-.6 5.4-3.4 8.4-7 9Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                        </svg>
+                        100% arabica
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Преимущества (4 колонки) -->
+    <section class="features" id="features_section" aria-labelledby="features-heading">
+        <div class="container">
+            <h2 class="visually-hidden" id="features-heading">Why Morning in a Cup</h2>
+            <ul class="features__list">
+                <li class="features__item">
+                    <svg  class="features__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         viewBox="0 0 512.002 512.002" xml:space="preserve">
+                        <g>
+                            <path style="fill:#5ABA63;" d="M252.899,512.002c-4.504,0-8.313-3.471-8.643-8.036c-7.706-104.222,3.662-160.516,11.186-197.762
+                                c8.669-42.947,12.635-62.551-18.276-109.698c-2.629-4.009-1.51-9.39,2.499-12.019c4.009-2.629,9.39-1.519,12.019,2.499
+                                c34.816,53.118,29.826,77.815,20.766,122.654c-7.775,38.487-18.415,91.205-10.891,193.041c0.356,4.782-3.237,8.947-8.01,9.294
+                                C253.333,511.994,253.116,512.002,252.899,512.002"/>
+                            <g>
+                                <path style="fill:#5F7D6C;" d="M252.908,512.002c0-81.651-45.481-234.305-114.35-234.305
+                                    C90.422,417.187,158.917,512.002,252.908,512.002"/>
+                                <path style="fill:#5F7D6C;" d="M252.908,512.002c0-81.651,45.481-234.305,114.35-234.305
+                                    C415.394,417.187,346.899,512.002,252.908,512.002"/>
+                                <path style="fill:#5F7D6C;" d="M270.264,277.697c-1.927,0-3.81-0.642-5.346-1.84c-2.013-1.579-3.237-3.966-3.332-6.517
+                                    c-2.994-81.868,59.184-115.538,118.376-119.747c2.3-0.148,4.565,0.599,6.3,2.1c1.736,1.51,2.803,3.645,2.968,5.944
+                                    c0.876,12.314-16.419,98.807-117.187,119.877C271.453,277.636,270.854,277.697,270.264,277.697"/>
+                                <path style="fill:#5F7D6C;" d="M244.332,200.401c-0.963,0-1.927-0.165-2.846-0.495c-65.38-23.535-89.183-69.068-97.644-103.12
+                                    c-10.865-43.728-0.946-85.001,7.194-93.948c2.291-2.517,5.84-3.463,9.068-2.421c18.701,6.014,115.252,67.098,92.898,192.738
+                                    c-0.061,0.347-0.148,0.694-0.252,1.033c-0.694,2.265-2.308,4.209-4.434,5.268C247.074,200.071,245.703,200.401,244.332,200.401"/>
+                            </g>
+                            <g>
+                                <path style="fill:#5ABA63;" d="M270.264,277.697c-2.187,0-4.382-0.824-6.075-2.482c-3.419-3.35-3.48-8.843-0.121-12.271
+                                    l53.404-54.524c3.358-3.428,8.852-3.48,12.271-0.13c3.428,3.35,3.489,8.843,0.13,12.271l-53.413,54.532
+                                    C274.768,276.829,272.512,277.697,270.264,277.697"/>
+                                <path style="fill:#5ABA63;" d="M244.467,200.311c-3.15,0-6.187-1.718-7.732-4.712l-39.224-76.436
+                                    c-2.196-4.261-0.503-9.494,3.758-11.681c4.261-2.204,9.494-0.503,11.681,3.758l39.233,76.427c2.187,4.27,0.503,9.502-3.758,11.689
+                                    C247.157,200.008,245.795,200.311,244.467,200.311"/>
+                            </g>
+                        </g>
+                        </svg>
+                    <h3 class="features__title">Selected beans</h3>
+                    <p class="features__text">Only trusted farms and specialty lots.</p>
+                </li>
+
+                <li class="features__item">
+                    <svg class="features__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         viewBox="0 0 512 512" xml:space="preserve">
+                        <path style="fill:#FFC080;" d="M395.13,414.442h-66.566c-6.957,0-13.185-4.315-15.63-10.827c-2.445-6.511-0.598-13.858,4.641-18.44
+                            c22.642-19.799,45.229-41.049,57.066-62.326c2.945-5.299,8.521-8.582,14.586-8.582h72.685c9.217,0,16.696,7.473,16.696,16.696
+                            C478.609,376.996,441.163,414.442,395.13,414.442z"/>
+                                                <g>
+                            <path style="fill:#FFD9B3;" d="M428.522,347.66h-39.294c-5.935,0-11.424-3.152-14.424-8.278c-2.99-5.124-3.033-11.457-0.119-16.626
+                                c6.663-11.794,9.761-23.011,9.761-35.316c0-6.691-0.826-12.962-2.468-18.636c-1.457-5.038-0.456-10.467,2.707-14.663
+                                c3.152-4.191,8.087-6.657,13.336-6.657h97.282c9.217,0,16.696,7.473,16.696,16.696C512,310.214,474.554,347.66,428.522,347.66z"/>
+                                                    <path style="fill:#FFD9B3;" d="M183.435,414.442H116.87c-46.032,0-83.478-37.446-83.478-83.478c0-9.223,7.479-16.696,16.696-16.696
+                                h72.685c6.065,0,11.641,3.282,14.586,8.582c11.837,21.277,34.424,42.527,57.066,62.326c5.239,4.581,7.087,11.93,4.641,18.44
+                                S190.392,414.442,183.435,414.442z"/>
+                        </g>
+                                                <path style="fill:#FFEFD9;" d="M122.772,347.66H83.478C37.446,347.66,0,310.214,0,264.181c0-9.223,7.479-16.696,16.696-16.696
+                            h97.282c5.25,0,10.184,2.468,13.336,6.657c3.163,4.196,4.163,9.624,2.707,14.663c-1.642,5.674-2.468,11.945-2.468,18.636
+                            c0,12.305,3.098,23.522,9.761,35.316c2.913,5.169,2.869,11.5-0.119,16.626C134.195,344.508,128.707,347.66,122.772,347.66z"/>
+                                                <path style="fill:#E6563A;" d="M256,475.991c-3.891,0-7.782-1.353-10.923-4.065c-13.598-11.766-26.565-22.636-38.728-32.831
+                            c-12.13-10.18-23.479-19.69-33.88-28.767c-24.946-21.799-49.978-45.511-64.283-71.25c-9.425-16.673-14.022-33.597-14.022-51.635
+                            c0-9.826,1.272-19.207,3.772-27.886c11.044-40.766,44.631-67.277,85.5-67.277c36.489,0,59.25,21.222,72.565,41.092
+                            c13.315-19.87,36.076-41.092,72.565-41.092c40.87,0,74.457,26.51,85.576,67.538c2.424,8.418,3.695,17.799,3.695,27.625
+                            c0,18.038-4.598,34.962-14.066,51.729c-14.261,25.647-39.294,49.359-64.217,71.147c-10.424,9.087-21.772,18.598-33.902,28.777
+                            c-12.163,10.195-25.13,21.065-38.728,32.831C263.782,474.638,259.891,475.991,256,475.991z"/>
+                                                <path style="fill:#FFC033;" d="M256,169.573c-66.63,0-116.87-28.712-116.87-66.783S189.37,36.008,256,36.008
+                            S372.87,64.72,372.87,102.79S322.63,169.573,256,169.573z M256,69.399c-50.956,0-83.478,19.778-83.478,33.391
+                            s32.522,33.391,83.478,33.391s83.478-19.778,83.478-33.391S306.956,69.399,256,69.399z"/>
+                                                <path style="fill:#D9472B;" d="M266.923,471.927c13.598-11.766,26.565-22.636,38.728-32.831c12.13-10.18,23.479-19.69,33.902-28.777
+                            c24.924-21.788,49.957-45.5,64.217-71.147c9.468-16.766,14.066-33.691,14.066-51.729c0-9.826-1.272-19.207-3.695-27.625
+                            c-11.119-41.027-44.706-67.538-85.576-67.538c-36.489,0-59.25,21.222-72.565,41.092v242.62
+                            C259.891,475.991,263.782,474.638,266.923,471.927z"/>
+                                                <path style="fill:#F9A926;" d="M339.478,102.79c0,13.614-32.522,33.391-83.478,33.391v33.391c66.63,0,116.87-28.712,116.87-66.783
+                            S322.63,36.008,256,36.008v33.391C306.956,69.399,339.478,89.176,339.478,102.79z"/>
+                        </svg>
+                    <h3 class="features__title">Skilled baristas</h3>
+                    <p class="features__text">Brewed with care and attention.</p>
+                </li>
+
+                <li class="features__item">
+                    <svg class="features__icon" fill="#000000" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                      <g transform="matrix(1,0,0,1,-1216,-256)">
+                        <rect id="Icons" x="0" y="0" width="1280" height="800" style="fill:none;"/>
+                          <g id="coffee-beans-filled" transform="matrix(0.812857,0,0,0.812857,602.165,-0.132909)">
+                          <!-- Заднее зерно — коричневое -->
+                          <g id="coffee-bean2" fill="#8B4513" transform="matrix(0.785276,0.453379,-0.453379,0.785276,382.475,-256.924)">
+                            <g transform="matrix(1,0,0,1,0,-0.699553)">
+                              <path d="M737.049,328.389C738.206,328.093 739.418,328.601 740.019,329.632C740.083,329.683 740.106,329.722 740.106,329.722C740.106,329.722 745.206,338.581 739.429,352.782C737.281,358.061 736.606,364.8 737.988,370.192C738.252,371.236 737.868,372.336 737.014,372.991C736.159,373.645 734.997,373.729 734.058,373.203C728.69,370.091 722.027,363.796 722.021,352C722.016,340.504 728.495,330.75 737.049,328.389Z"/>
+                            </g>
+                              <g transform="matrix(-1,0,0,-1,1483.03,703.293)">
+                              <path d="M736.986,328.407C738.175,328.097 739.426,328.617 740.045,329.679C740.093,329.701 740.106,329.722 740.106,329.722C740.106,329.722 745.206,338.581 739.429,352.782C737.261,358.111 736.594,364.927 738.028,370.344C738.292,371.357 737.928,372.429 737.101,373.072C736.275,373.714 735.146,373.803 734.23,373.297C728.832,370.224 722.027,363.921 722.021,352C722.016,340.532 728.463,330.798 736.986,328.407Z"/>
+                            </g>
+                          </g>
+                              <!-- Переднее зерно — светло-коричневое -->
+                              <g transform="matrix(1.23023,0,0,1.23023,-189.709,-77.6604)">
+                            <path d="M792.011,368.377C792.881,368.366 793.638,367.779 793.867,366.94C793.905,366.882 793.915,366.845 793.915,366.845C793.915,366.845 795.856,359.564 789.034,350.557C786.506,347.219 784.744,342.57 784.688,338.477C784.673,337.676 784.184,336.961 783.442,336.657C782.701,336.353 781.85,336.519 781.277,337.079C778.06,340.326 774.552,346.067 776.79,354.434C778.981,362.627 785.464,368.338 792.011,368.377ZM796.55,364C797.325,364.444 797.962,364.63 798.879,364.474C798.492,365.399 797.919,366.083 797.371,366.569C797.121,366.766 796.776,366.793 796.499,366.637C796.221,366.482 796.064,366.174 796.102,365.858C796.127,365.354 796.248,364.755 796.55,364ZM800,338.416C792.778,343.712 792.722,351.486 792.429,351.099C785.607,342.091 787.425,334.591 787.425,334.591C787.425,334.591 787.436,334.55 787.454,334.483C787.683,333.644 788.434,333.052 789.304,333.027C793.183,333.073 797.042,335.08 800,338.416Z" style="fill:#D2B48C;"/>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                    <h3 class="features__title">Fresh roast</h3>
+                    <p class="features__text">Small batches, roasted every week.</p>
+                </li>
+
+                <li class="features__item">
+                    <svg class="features__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.468 25.468" xml:space="preserve">
+                        <!-- Чашка (#5F7D6C) -->
+                        <path fill="#5F7D6C" d="M19.417,16.694c-0.096,0-0.188,0.02-0.282,0.028c0.096-0.59,0.16-0.658,0.172-1.28c0.006-0.051,0.016-0.101,0.019-0.154c-0.149-3.101-3.876-4.877-8.076-4.915c-4.203,0.036-7.929,1.813-8.079,4.914c0.003,0.058,0.016,0.112,0.019,0.168c0-0.002,0-0.002,0-0.002c0.125,5.557,3.681,10.015,8.06,10.015c2.397,0,4.543-1.344,6.019-3.465c0.526,0.599,1.289,0.98,2.149,0.98c1.588,0,2.878-1.823,2.878-3.412C22.295,17.982,21.006,16.694,19.417,16.694z M16.465,17.433c-1.289,0.735-3.167,1.224-5.253,1.22c-2.088,0.004-3.967-0.485-5.257-1.22c-1.309-0.744-1.926-1.656-1.916-2.463c-0.011-0.814,0.609-1.726,1.916-2.469c1.291-0.736,3.17-1.222,5.257-1.22c2.085-0.003,3.964,0.484,5.253,1.22c1.309,0.743,1.929,1.655,1.918,2.469C18.393,15.775,17.774,16.689,16.465,17.433z M19.417,21.423c-0.61-0.001-1.101-0.424-1.251-0.985c0.208-0.451,0.392-1.46,0.548-1.951c0.206-0.132,0.438-0.231,0.702-0.234c0.724,0.003,1.314,0.592,1.317,1.318C20.731,20.3,20.142,21.422,19.417,21.423z"/>
+
+                        <!-- Сердце: основной контур (#E74C3C) -->
+                        <path fill="#E74C3C" d="M14.704,13.794c0.001-0.035,0-0.069-0.004-0.101c-0.059-0.454-0.276-0.771-0.662-0.97c-0.382-0.197-0.937-0.274-1.654-0.231c-1.557,0.095-4.638,1.85-5.65,2.506c0.958,0.728,3.896,2.307,5.453,2.525c0.711,0.1,1.271,0.066,1.667-0.099c0.398-0.169,0.64-0.469,0.735-0.914c0.008-0.033,0.012-0.067,0.012-0.101c0.017-0.41-0.303-0.835-0.812-1.086l-0.568-0.276l0.587-0.235C14.337,14.602,14.689,14.203,14.704,13.794z"/>
+
+                        <!-- Сердце: светлый блик (#FF6B6B) -->
+                        <path fill="#FF6B6B" d="M12.872,14.854l-0.404,0.161l0.39,0.191c0.351,0.171,0.571,0.464,0.559,0.745c-0.001,0.024-0.003,0.048-0.008,0.071c-0.067,0.307-0.233,0.513-0.507,0.629c-0.272,0.114-0.657,0.137-1.145,0.069c-1.072-0.15-3.201-1.179-3.86-1.679c0.695-0.451,2.924-1.716,3.995-1.781c0.493-0.029,0.874,0.024,1.137,0.16c0.264,0.136,0.414,0.353,0.454,0.667c0.004,0.021,0.004,0.046,0.004,0.069C13.476,14.436,13.236,14.711,12.872,14.854z"/>
+
+                        <!-- Пар (#FFB6C1) -->
+                        <path fill="#FFB6C1" d="M9.444,7.298c-0.109-0.35-0.039-0.787,0.2-1.095c0.236-0.307,0.56-0.494,0.879-0.638c0.172-0.069,0.306-0.12,0.447-0.191c0.14-0.071,0.27-0.153,0.386-0.244c0.236-0.182,0.378-0.43,0.363-0.715c-0.017-0.285-0.166-0.58-0.35-0.844c-0.006-0.011-0.016-0.019-0.022-0.029c-0.003,0.002-0.005,0.005-0.006,0.007c-0.17,0.138-0.391,0.174-0.533-0.009c-0.056-0.071-0.111-0.14-0.165-0.21c-0.252-0.326-0.5-0.662-0.684-1.032c-0.208-0.413-0.36-0.891-0.22-1.347c0.167-0.553,0.809-1.119,1.417-0.904c0.352,0.125,0.61,0.434,0.799,0.762c0.273-0.191,0.593-0.344,0.92-0.273c0.333,0.073,0.423,0.434,0.43,0.724c0.008,0.352-0.121,0.718-0.283,1.026c-0.205,0.389-0.502,0.716-0.876,0.947c-0.172,0.106-0.423,0.055-0.462-0.165c-0.043-0.239,0.129-0.452,0.317-0.573c0.003-0.002,0.007-0.005,0.01-0.007c0.001,0,0.001,0,0.002-0.001c0.023-0.014,0.046-0.032,0.011-0.009c0.001-0.001,0.002-0.001,0.003-0.002c0.032-0.023,0.063-0.048,0.092-0.074c0.004-0.005,0.01-0.01,0.015-0.015c0.02-0.021,0.04-0.044,0.058-0.066c0.026-0.03,0.05-0.061,0.073-0.092c0.038-0.059,0.073-0.12,0.104-0.182c0.008-0.016,0.017-0.034,0.025-0.05c0.009-0.02,0.021-0.053,0.027-0.067c0.021-0.064,0.043-0.128,0.058-0.192c0.002-0.006,0.004-0.013,0.005-0.019c0.004-0.024,0.008-0.049,0.011-0.072c0.004-0.04,0.007-0.079,0.008-0.12c-0.002-0.016-0.003-0.035-0.004-0.045c-0.004-0.022-0.007-0.043-0.012-0.065c-0.002,0-0.002-0.002-0.004-0.003c-0.006-0.011-0.012-0.022-0.019-0.034c-0.004-0.003-0.007-0.006-0.01-0.008c-0.003-0.001-0.005-0.002-0.007-0.004C12.438,1.37,12.428,1.37,12.42,1.371c-0.006,0.001-0.013,0.003-0.021,0.006c-0.007,0.002-0.014,0.004-0.021,0.006c-0.026,0.012-0.05,0.024-0.075,0.038c-0.023,0.012-0.089,0.056-0.092,0.057c-0.015,0.011-0.031,0.021-0.045,0.033c-0.089,0.066-0.174,0.138-0.254,0.213c-0.128,0.116-0.438,0.201-0.531-0.01c-0.087-0.195-0.193-0.386-0.323-0.555c-0.01-0.012-0.022-0.026-0.025-0.031c-0.019-0.021-0.037-0.041-0.056-0.06c-0.038-0.038-0.077-0.076-0.12-0.109c-0.02-0.016-0.041-0.031-0.063-0.045c-0.007-0.005-0.026-0.014-0.036-0.021c-0.035-0.015-0.068-0.027-0.105-0.036c0,0,0,0-0.001,0c-0.017,0-0.032-0.001-0.049,0c-0.008,0-0.015,0.002-0.019,0.004c-0.003,0-0.005,0.001-0.007,0.002c-0.015,0.008-0.034,0.02-0.041,0.024c-0.005,0.004-0.01,0.009-0.015,0.015c-0.005,0.003-0.008,0.01-0.012,0.017c-0.003,0.009-0.007,0.02-0.011,0.03c-0.003,0.025-0.008,0.062-0.009,0.078c0,0.014-0.001,0.027-0.001,0.041c0,0.004,0,0.007,0,0.009c0.01,0.093,0.027,0.182,0.054,0.272c0.003,0.015,0.008,0.028,0.012,0.042c0.005,0.012,0.009,0.026,0.012,0.032c0.018,0.047,0.037,0.095,0.058,0.141c0.086,0.19,0.19,0.373,0.303,0.549c0.188,0.29,0.4,0.561,0.613,0.832c0.058,0.075,0.038,0.216,0.012,0.298c-0.019,0.058-0.047,0.112-0.081,0.162c0.016,0.015,0.035,0.027,0.05,0.043c0.23,0.252,0.447,0.551,0.505,0.935c0.073,0.393-0.148,0.801-0.428,1.033c-0.273,0.242-0.626,0.397-0.919,0.514C10.391,6.052,10.12,6.214,9.94,6.434C9.753,6.65,9.693,6.934,9.746,7.23c0.053,0.297,0.197,0.592,0.369,0.866c0.17,0.28,0.383,0.537,0.604,0.788C10.181,8.497,9.657,8.007,9.444,7.298z M12.024,2.478c-0.005,0.003-0.009,0.006-0.013,0.009c-0.001,0-0.001,0.001-0.002,0.001C12.024,2.478,12.017,2.483,12.024,2.478z M12.297,3.98c-0.078,0.259,0.006,0.529,0.123,0.76c0.104,0.207,0.243,0.398,0.385,0.581c0.03,0.04,0.061,0.079,0.092,0.118c0.075,0.097,0.186,0.083,0.278,0.019c0.019,0.027,0.042,0.051,0.058,0.079c0.143,0.21,0.253,0.445,0.262,0.663c0.007,0.215-0.099,0.396-0.283,0.536c-0.09,0.07-0.191,0.134-0.3,0.189c-0.112,0.056-0.214,0.093-0.354,0.151c-0.257,0.118-0.521,0.268-0.715,0.523c-0.196,0.253-0.252,0.617-0.159,0.902c0.178,0.577,0.607,0.958,1.048,1.258c-0.34-0.406-0.657-0.861-0.747-1.326c-0.096-0.471,0.27-0.807,0.731-0.991c0.229-0.094,0.519-0.221,0.74-0.417c0.228-0.191,0.412-0.532,0.348-0.856c-0.05-0.316-0.231-0.557-0.42-0.755c-0.029-0.029-0.064-0.054-0.096-0.082c0.011-0.019,0.022-0.036,0.029-0.056c0.014-0.047,0.026-0.127-0.007-0.168c-0.12-0.153-0.239-0.306-0.345-0.468c-0.065-0.099-0.123-0.203-0.171-0.31c-0.011-0.026-0.023-0.052-0.033-0.08c-0.002-0.004-0.004-0.011-0.006-0.018c-0.002-0.008-0.004-0.016-0.007-0.023c-0.014-0.05-0.025-0.101-0.03-0.154c-0.002-0.002-0.002-0.004-0.002-0.005c0-0.009,0-0.016,0.001-0.024c0-0.009,0.003-0.028,0.005-0.044c0.003-0.004,0.004-0.011,0.006-0.016c0.003-0.005,0.005-0.008,0.006-0.012c0.004-0.002,0.006-0.004,0.01-0.008c0.004-0.001,0.015-0.009,0.023-0.013c0.001,0,0.003-0.002,0.004-0.002c0.004-0.002,0.007-0.002,0.012-0.002c0.009,0,0.019,0,0.027,0h0.001c0.02,0.004,0.04,0.012,0.058,0.021c0.006,0.003,0.017,0.008,0.021,0.011c0.012,0.009,0.023,0.017,0.035,0.025c0.024,0.019,0.046,0.04,0.066,0.06c0.012,0.012,0.021,0.024,0.033,0.035c0.002,0.003,0.009,0.011,0.015,0.018c0.073,0.095,0.132,0.203,0.182,0.313c0.052,0.119,0.228,0.071,0.299,0.005c0.047-0.043,0.093-0.083,0.143-0.12c0.008-0.007,0.017-0.013,0.026-0.019c0.002-0.002,0.039-0.025,0.052-0.032c0.014-0.008,0.028-0.014,0.043-0.021c0.004-0.001,0.009-0.003,0.011-0.004c0.004-0.001,0.009-0.001,0.013-0.003c0.005,0,0.01-0.002,0.015-0.002c0.002,0,0.003,0.002,0.004,0.002c0.002,0.002,0.004,0.003,0.005,0.004c0.003,0.006,0.007,0.014,0.01,0.019c0.001,0.002,0.001,0.002,0.001,0.002c0.004,0.012,0.004,0.024,0.006,0.036c0.002,0.006,0.003,0.018,0.004,0.027c-0.001,0.02-0.003,0.043-0.005,0.066c0,0.013-0.003,0.027-0.005,0.042c-0.001,0.002-0.002,0.006-0.002,0.01c-0.008,0.037-0.02,0.073-0.034,0.109c-0.003,0.009-0.011,0.027-0.015,0.039c-0.005,0.009-0.009,0.019-0.014,0.027c-0.019,0.035-0.037,0.069-0.058,0.103c-0.012,0.018-0.027,0.035-0.04,0.051c-0.012,0.013-0.022,0.025-0.035,0.038c-0.003,0.004-0.006,0.005-0.009,0.008c-0.016,0.015-0.034,0.029-0.052,0.042c-0.004,0.004-0.009,0.007-0.014,0.012c-0.106,0.066-0.203,0.187-0.179,0.322c0.022,0.123,0.164,0.151,0.26,0.092c0.211-0.129,0.377-0.314,0.493-0.534c0.092-0.172,0.165-0.379,0.159-0.577c-0.003-0.164-0.054-0.367-0.241-0.407c-0.183-0.04-0.364,0.045-0.518,0.152c-0.106-0.185-0.252-0.358-0.45-0.428C12.753,3.351,12.393,3.67,12.297,3.98z M13.577,4.847c-0.001,0.001-0.002,0.001-0.003,0.002C13.623,4.814,13.593,4.837,13.577,4.847z"/>
+                    </svg>
+                    <h3 class="features__title">A cozy space</h3>
+                    <p class="features__text">Light, calm, and easy to linger in.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 3. Популярные напитки (Слайдер) -->
+    <section class="coffee" id="coffee_section" aria-labelledby="coffee-heading">
+        <div class="container">
+            <div class="coffee__panel">
+                <div class="coffee__intro">
+                    <h2 class="coffee__title" id="coffee-heading">Popular drinks</h2>
+                    <p class="coffee__lead">Classics and signature drinks for every taste.</p>
+                    <a class="btn btn--secondary" href="catalog.html">View full menu</a>
+                </div>
+
+                <div class="coffee__slider"
+                     data-coffee-slider
+                     role="region"
+                     aria-roledescription="carousel"
+                     aria-label="Popular drinks">
+                    <div class="coffee__viewport">
+                        <ul class="coffee__track">
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Matcha%20Latte.webp" alt="Matcha latte with leaf latte art, top view" width="1024" height="1024">
+                                    </div>
+                                    <h3 class="drink-card__title">Matcha Latte</h3>
+                                    <p class="drink-card__text">Green harmony</p>
+                                    <p class="drink-card__price">$4.80</p>
+                                </article>
+                            </li>
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Flat%20White.webp" alt="Flat white in a cup, top view" width="1024" height="1024" loading="lazy">
+                                    </div>
+                                    <h3 class="drink-card__title">Flat White</h3>
+                                    <p class="drink-card__text">Silky and bold</p>
+                                    <p class="drink-card__price">$4.20</p>
+                                </article>
+                            </li>
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Cappuccino.webp" alt="Cappuccino with cocoa on milk foam, top view" width="1024" height="1024" loading="lazy">
+                                    </div>
+                                    <h3 class="drink-card__title">Cappuccino</h3>
+                                    <p class="drink-card__text">Foamy and warm</p>
+                                    <p class="drink-card__price">$4.10</p>
+                                </article>
+                            </li>
+
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Classic%20Latte.webp" alt="Classic latte in a cup, top view" width="1024" height="1024">
+                                    </div>
+                                    <h3 class="drink-card__title">Classic Latte</h3>
+                                    <p class="drink-card__text">Smooth and creamy</p>
+                                    <p class="drink-card__price">$4.40</p>
+                                </article>
+                            </li>
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Espresso.webp" alt="Espresso in a red cup, top view" width="1024" height="1024" loading="lazy">
+                                    </div>
+                                    <h3 class="drink-card__title">Espresso</h3>
+                                    <p class="drink-card__text">Short and intense</p>
+                                    <p class="drink-card__price">$2.90</p>
+                                </article>
+                            </li>
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Mocha.webp" alt="Mocha in a cup, top view" width="1024" height="1024" loading="lazy">
+                                    </div>
+                                    <h3 class="drink-card__title">Mocha</h3>
+                                    <p class="drink-card__text">Cocoa and milk</p>
+                                    <p class="drink-card__price">$4.70</p>
+                                </article>
+                            </li>
+
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Cold%20Brew.webp" alt="Cold brew in a glass, top view" width="1024" height="1024" loading="lazy">
+                                    </div>
+                                    <h3 class="drink-card__title">Cold Brew</h3>
+                                    <p class="drink-card__text">Smooth and mellow</p>
+                                    <p class="drink-card__price">$4.30</p>
+                                </article>
+                            </li>
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Iced%20Latte.webp" alt="Iced latte in a glass, top view" width="1024" height="1024" loading="lazy">
+                                    </div>
+                                    <h3 class="drink-card__title">Iced Latte</h3>
+                                    <p class="drink-card__text">Cool and milky</p>
+                                    <p class="drink-card__price">$4.50</p>
+                                </article>
+                            </li>
+                            <li class="coffee__slide">
+                                <article class="drink-card">
+                                    <div class="drink-card__media">
+                                        <img class="drink-card__image" src="assets/images/coffee/Iced%20Matcha%20Latte.webp" alt="Iced matcha latte in a glass, top view" width="1024" height="1024" loading="lazy">
+                                    </div>
+                                    <h3 class="drink-card__title">Iced Matcha Latte</h3>
+                                    <p class="drink-card__text">Iced and refreshing</p>
+                                    <p class="drink-card__price">$4.90</p>
+                                </article>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="coffee__controls">
+                        <button class="coffee__arrow coffee__arrow--prev" type="button" aria-label="Previous drinks">
+                            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                                <path d="M12.5 4.5 7 10l5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="coffee__dots" role="group" aria-label="Drink pages"></div>
+                        <button class="coffee__arrow coffee__arrow--next" type="button" aria-label="Next drinks">
+                            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                                <path d="M7.5 4.5 13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Рекомендуем попробовать (основное меню) -->
+    <section class="deserts" id="deserts_section" aria-labelledby="deserts-heading">
+        <div class="container deserts__container">
+            <h2 class="deserts__title" id="deserts-heading">Try this with your coffee</h2>
+            <div class="deserts__panel">
+                <article class="desert-card">
+                    <div class="desert-card__media">
+                        <img class="desert-card__image" src="assets/images/deserts/cupcake.webp" alt="Red velvet cupcakes topped with cream and fresh strawberries" width="1024" height="1024" loading="lazy">
+                    </div>
+                    <div class="desert-card__description">
+                        <div class="desert-card__about-text">
+                            <h3 class="desert-card__title">Strawberry cupcake</h3>
+                            <p class="desert-card__text">Cream and fresh berries</p>
+                        </div>
+                        <p class="desert-card__price">$4.50</p>
+                    </div>
+                </article>
+
+                <article class="desert-card">
+                    <div class="desert-card__media">
+                        <img class="desert-card__image" src="assets/images/deserts/cookies.webp" alt="Pistachio cookies topped with raspberries and crushed nuts" width="1152" height="1152" loading="lazy">
+                    </div>
+                    <div class="desert-card__description">
+                        <div class="desert-card__about-text">
+                            <h3 class="desert-card__title">Pistachio cookies</h3>
+                            <p class="desert-card__text">Raspberry and pistachio in a breathtaking duet</p>
+                        </div>
+                        <p class="desert-card__price">$3.80</p>
+                    </div>
+                </article>
+
+                <article class="desert-card">
+                    <div class="desert-card__media">
+                        <img class="desert-card__image" src="assets/images/deserts/medovik.webp" alt="Slice of layered honey cake with a strawberry on top" width="1218" height="1218" loading="lazy">
+                    </div>
+                    <div class="desert-card__description">
+                        <div class="desert-card__about-text">
+                            <h3 class="desert-card__title">Honey cake</h3>
+                            <p class="desert-card__text">Soft honey layers with delicate strawberries on top</p>
+                        </div>
+                        <p class="desert-card__price">$5.20</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 5. Зёрна, которыми гордимся -->
+    <section class="beans" id="beans_section" aria-labelledby="beans-heading">
+        <div class="container">
+            <div class="beans__panel">
+                <div class="beans__intro">
+                    <h2 class="beans__title" id="beans-heading">Beans we're proud of</h2>
+                    <p class="beans__lead">We look for clear, careful lots, roast them in small batches, and keep that flavor in every cup.</p>
+                    <a class="btn btn--primary" href="catalog.html">Choose beans</a>
+                </div>
+                <ul class="beans__list">
+                    <li class="beans__item">
+                        <svg class="beans__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+                            <path d="M20 32C20 22 14.5 16 7 14c1 11 6.5 16.5 13 18Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                            <path d="M20 32C20 22 25.5 16 33 14c-1 11-6.5 16.5-13 18Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                            <path d="M20 32V18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                        </svg>
+                        <p class="beans__label">Direct from farms</p>
+                    </li>
+                    <li class="beans__item">
+                        <svg class="beans__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+                            <path d="M20 8c1.4 5-2 7.4-2 11.2 0 1.8.9 2.9 2 2.9s2-1.1 2-2.9c1.5 1.6 5.2 3.3 5.2 8.4A7.2 7.2 0 0 1 12.8 27.6c0-4.4 2.5-7 4.4-9.6C18.4 16.2 19.1 13 20 8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="beans__label">Roasted to order</p>
+                    </li>
+                    <li class="beans__item">
+                        <svg class="beans__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+                            <path d="M14 16h12l-1 12a4 4 0 0 1-4 3.5h-2A4 4 0 0 1 15 28l-1-12Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                            <path d="M16 16v-2a4 4 0 0 1 8 0v2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                        </svg>
+                        <p class="beans__label">Fresh in every bag</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Зёрна, которыми гордимся -->
+    <section class="contacts" id="contacts_section" aria-labelledby="contacts-heading">
+        <div class="container">
+            <div class="contacts__panel">
+                <div class="contacts__info">
+                    <h2 class="contacts__title" id="contacts-heading">Come and see us</h2>
+                    <address class="contacts__list">
+                        <p class="contacts__item">
+                            <svg class="contacts__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M12 21s6-5.2 6-10a6 6 0 1 0-12 0c0 4.8 6 10 6 10Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                                <circle cx="12" cy="11" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                            </svg>
+                            <a class="contacts__link" href="https://www.google.com/maps/search/?api=1&amp;query=Joybow%20Coffee%20%26%20Play%20Pafou%20Arch.%20Makarios%20III%20Avenue" target="_blank" rel="noopener noreferrer">Pafou &amp; Arch. Makarios III Avenue</a>
+                        </p>
+                        <p class="contacts__item">
+                            <svg class="contacts__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                                <path d="M12 8v4.5l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Daily, 08:00–21:00</span>
+                        </p>
+                        <p class="contacts__item">
+                            <svg class="contacts__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M8 4h3l1.5 4-2 1.2a11 11 0 0 0 4.3 4.3L16 12l4 1.5V17a2 2 0 0 1-2.2 2A14 14 0 0 1 5 6.2 2 2 0 0 1 7 4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                            </svg>
+                            <a class="contacts__link" href="tel:+15550100142">+1 555 010 0142</a>
+                        </p>
+                    </address>
+                </div>
+                <div class="contacts__map">
+                    <img class="contacts__image" src="assets/images/map.webp" alt="Map pin on Pafou at Arch. Makarios III Avenue, with a photo of the café" width="1152" height="1151" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Футер -->
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__brand">
+            <a class="footer__logo" href="index.html">
+                <img class="footer__logo-img" src="assets/logo.webp" alt="Morning in a Cup logo" width="40" height="40">
+                <span>Morning in a Cup</span>
+            </a>
+            <p class="footer__tagline">Specialty coffee, fresh pastry, and a quiet corner in the city.</p>
+        </div>
+
+        <address class="footer__contacts">
+            <p class="footer__label">Come and see us</p>
+            <a class="footer__link" href="https://www.google.com/maps/search/?api=1&amp;query=Joybow%20Coffee%20%26%20Play%20Pafou%20Arch.%20Makarios%20III%20Avenue" target="_blank" rel="noopener noreferrer">Pafou &amp; Arch. Makarios III Avenue</a>
+            <a class="footer__link" href="tel:+15550100142">+1 555 010 0142</a>
+            <p>Daily, 08:00–21:00</p>
+        </address>
+
+        <div class="footer__author">
+            <p class="footer__label">Author</p>
+            <ul class="footer__links">
+                <li><a class="footer__link" href="https://github.com/theFoxTale/rsschool-landing-page" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a class="footer__link" href="https://t.me/annie_in_life" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+                <li><a class="footer__link" href="mailto:makarenkoanna@yandex.ru">makarenkoanna@yandex.ru</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <p class="footer__copy">© 2026 Morning in a Cup. Educational project for <a class="footer__link" href="https://rs.school/courses/fullstack-engineering" target="_blank" rel="noopener noreferrer">RS School</a> Fullstack Engineering.</p>
+    </div>
+</footer>
+
+<!-- Подключение скриптов -->
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>

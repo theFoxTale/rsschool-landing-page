@@ -1,0 +1,156 @@
+@use '../abstracts/mixins' as *;
+
+.coffee {
+    padding: 24px 0 56px;
+}
+
+.coffee__panel {
+    display: grid;
+    grid-template-columns: minmax(200px, 260px) minmax(0, 1fr);
+    gap: 28px 32px;
+    align-items: center;
+    background-color: var(--color-panel);
+    color: var(--color-text-light);
+    border-radius: 32px;
+    padding: 40px 36px 28px;
+}
+
+.coffee__title {
+    font-size: clamp(1.75rem, 3vw, 2.4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    color: var(--color-text-dark);
+    user-select: none;
+}
+
+.coffee__lead {
+    max-width: 16rem;
+    margin-bottom: 24px;
+    line-height: 1.45;
+    user-select: none;
+}
+
+.coffee__slider {
+    --coffee-gap: 16px;
+    --coffee-per-view: 3;
+    min-width: 0;
+}
+
+.coffee__viewport {
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.coffee__track {
+    display: flex;
+    gap: var(--coffee-gap);
+    width: 100%;
+    transition: transform 0.45s ease;
+}
+
+.coffee__slide {
+    flex: 0 0 calc((100% - (var(--coffee-per-view) - 1) * var(--coffee-gap)) / var(--coffee-per-view));
+    min-width: 0;
+}
+
+.coffee__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 18px;
+    color: var(--color-text-light);
+}
+
+.coffee__arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-surface);
+    color: var(--color-text-dark);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.coffee__arrow:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.coffee__dots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.coffee__dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coffee__dot:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.coffee__dot.is-active,
+.coffee__dot.is-active:hover {
+    background-color: var(--color-white);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);
+}
+
+.coffee__arrow:focus-visible,
+.coffee__dot:focus-visible,
+.coffee__intro .btn:focus-visible {
+    outline: 2px solid var(--color-white);
+    outline-offset: 3px;
+}
+
+@include respond-to('900') {
+    .coffee__panel {
+        grid-template-columns: 1fr;
+        padding: 28px 20px 20px;
+    }
+
+    .coffee__slider {
+        --coffee-per-view: 2;
+    }
+}
+
+@include respond-to('560') {
+    .coffee__slider {
+        --coffee-per-view: 1;
+    }
+
+    .coffee__title {
+        font-size: 1.75rem;
+    }
+}
+
+@include respond-to('380') {
+    .coffee {
+        padding: 16px 0 40px;
+    }
+
+    .coffee__panel {
+        border-radius: 20px;
+        padding: 22px 14px 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .coffee__track,
+    .drink-card__image,
+    .coffee__arrow,
+    .coffee__dot {
+        transition: none;
+    }
+}

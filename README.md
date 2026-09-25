@@ -54,9 +54,15 @@ rsschool-landing-page/
 ├── .github/workflows/      # CI: deploy to GitHub Pages
 ├── index.html              # Home page
 ├── catalog.html            # Menu / Catalog page
-├── css/
-│   ├── style.css           # Main styles
-│   └── ...
+├── scss/                   # 7-1 SCSS, compiled by Vite
+│   ├── main.scss
+│   ├── abstracts/
+│   ├── base/
+│   ├── components/
+│   ├── layout/
+│   ├── pages/
+│   ├── themes/
+│   └── vendors/
 ├── js/
 │   ├── main.js             # Theme toggle, burger menu, smooth scroll
 │   ├── slider.js           # Custom carousel
@@ -81,13 +87,21 @@ git clone https://github.com/theFoxTale/rsschool-landing-page.git
 cd rsschool-landing-page
 ```
 
-Open `index.html` in a browser, or serve locally:
+Install dependencies and start the dev server (Node 20 or newer):
 
 ```bash
-npx serve .
+npm install
+npm run dev
 ```
 
-Then visit the URL printed in the terminal (usually `http://localhost:3000`).
+Vite prints a local URL, usually `http://localhost:5173`. The menu page is `catalog.html` on that same origin.
+
+Build the static site into `dist/`:
+
+```bash
+npm run build
+npm run preview
+```
 
 ## Deployment (GitHub Actions → Pages)
 
