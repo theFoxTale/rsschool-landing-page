@@ -7,5 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const isOpen = header.classList.toggle('active');
 
         burger.classList.toggle('active', isOpen);
+
+        burger.setAttribute('aria-expanded', String(isOpen));
+        burger.setAttribute('aria-label', isOpen ? 'Close a menu' : 'Open a menu');
     });
 });
