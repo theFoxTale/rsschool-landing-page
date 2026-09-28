@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!burger || !header) return;
 
     burger.addEventListener('click', () => {
-        burger.classList.toggle('active');
-        header.classList.toggle('active');
+        const isOpen = header.classList.toggle('active');
+
+        burger.classList.toggle('active', isOpen);
     });
 });
