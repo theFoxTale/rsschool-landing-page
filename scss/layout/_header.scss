@@ -78,11 +78,12 @@ body.is-scroll-locked .header {
         left: 0;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
+        height: calc(100vh - var(--header-height));
         padding: 20px;
         background-color: var(--color-bg-main);
-        box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
-        max-height: calc(100vh - var(--header-height));
         overflow-y: auto;
         overscroll-behavior: contain;
         touch-action: pan-y;
