@@ -1,3 +1,5 @@
+**Язык:** [English](./README.md) | [Русский](./docs/README_ru.md)
+
 # ☕ [Morning in a Cup] — Landing Page
 
 [![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-0A66C2?style=flat&logo=githubpages&logoColor=white)](https://your-username.github.io/rsschool-landing-page/)
@@ -68,6 +70,7 @@ rsschool-landing-page/
 │   │   ├── theme.js        # Light and dark theme toggle
 │   │   ├── slider.js       # Drinks carousel
 │   │   └── catalog.js      # Category filters and show more
+│   │   └── burger.js       # Burger menu and navigation
 │   └── pages/
 │       ├── home.js         # Home page entry
 │       └── catalog.js      # Menu page entry
@@ -124,8 +127,8 @@ This repository follows the **Landing Page** assignment from the RS School Fulls
 
 - **Repository name:** `rsschool-landing-page` (personal public repo)
 - **Branch workflow:**  
-  `landing-page` → Part 1 (markup & themes)  
-  `landing-page-part-2` → Part 2 (interactivity)
+  `landing-page` → [Part 1 (markup & themes)](./docs/README-part-1.md)
+  `landing-page-part-2` → [Part 2 (interactivity)](./docs/README-part-2.md)
 - **Deployed via:** GitHub Pages
 - **Content in English**
 
