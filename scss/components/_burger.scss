@@ -1,0 +1,14 @@
+/* Скрываем бургер на десктопе */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger__line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-text-dark);
+    border-radius: 2px;
+    transition: 0.3s;
+}

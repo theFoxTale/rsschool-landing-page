@@ -1,0 +1,25 @@
+:root {
+    /* Цвета из макета */
+    --color-bg-main: #f4f1ea; /* Светло-бежевый фон */
+    --color-bg-green: #dce3de; /* Зеленый блок */
+    --color-panel: #5f7d6c; /* Панель напитков */
+    --color-sage: #5f7d6c; /* Иконки и цены */
+    --color-accent: #e87c4f; /* Оранжевая кнопка */
+    --color-accent-hover: #d16a3e;
+    --color-link-hover: #e87c4f;
+    --color-text-dark: #2c2c2c;
+    --color-text-light: #f4f1ea;
+    --color-white: #fff;
+    --color-surface: #fff;
+    --color-line: rgb(95 125 108 / 45%);
+    --color-card-line: rgb(141 163 148 / 70%);
+
+    /* Шрифты */
+    --font-main: 'Nunito', sans-serif;
+
+    /* Отступы */
+    --container-width: 1200px;
+    --header-height: 80px;
+
+    color-scheme: light;
+}
