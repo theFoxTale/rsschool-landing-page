@@ -63,10 +63,14 @@ rsschool-landing-page/
 │   ├── themes/
 │   └── vendors/
 ├── js/
-│   ├── main.js             # Theme toggle, burger menu, smooth scroll
-│   ├── slider.js           # Custom carousel
-│   ├── catalog.js          # Category filtering & card rendering
-│   └── modal.js            # Modal window & option logic
+│   ├── modules/
+│   │   ├── main.js         # Shared styles; enables smooth scroll after load
+│   │   ├── theme.js        # Light and dark theme toggle
+│   │   ├── slider.js       # Drinks carousel
+│   │   └── catalog.js      # Category filters and show more
+│   └── pages/
+│       ├── home.js         # Home page entry
+│       └── catalog.js      # Menu page entry
 ├── assets/
 │   ├── fonts/              # Local woff2 font files
 │   ├── icons/              # SVG icons

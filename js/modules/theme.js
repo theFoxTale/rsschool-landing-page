@@ -1,7 +1,5 @@
-import '../scss/main.scss';
-
-const STORAGE_KEY = 'coffee_morning_in_cup_theme';
 let toggle;
+const STORAGE_KEY = 'coffee_morning_in_cup_theme';
 
 function readTheme() {
     try {
@@ -15,7 +13,7 @@ function saveTheme(theme) {
     try {
         localStorage.setItem(STORAGE_KEY, theme);
     } catch {
-        // Storage can be blocked; the theme still applies for this visit.
+        console.error('Error apply theme');
     }
 }
 
@@ -46,8 +44,4 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTheme(next);
         saveTheme(next);
     });
-});
-
-window.addEventListener('load', () => {
-    document.documentElement.classList.add('is-smooth');
 });

@@ -1,4 +1,4 @@
-import '../scss/pages/_catalog.scss';
+import '../../scss/pages/_catalog.scss';
 
 let rootElement;
 
