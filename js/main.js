@@ -47,3 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         saveTheme(next);
     });
 });
+
+window.addEventListener('load', () => {
+    document.documentElement.classList.add('is-smooth');
+});
