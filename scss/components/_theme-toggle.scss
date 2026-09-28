@@ -22,7 +22,7 @@
     grid-area: 1 / 1;
 }
 
-html:not([data-theme="dark"]) .theme-toggle__icon--dark,
-html[data-theme="dark"] .theme-toggle__icon--light {
+html:not([data-theme='dark']) .theme-toggle__icon--dark,
+html[data-theme='dark'] .theme-toggle__icon--light {
     display: none;
 }

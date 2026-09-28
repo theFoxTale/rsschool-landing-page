@@ -7,11 +7,14 @@
     background-color: var(--color-surface);
     border-radius: 20px;
     padding: 12px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.35s ease;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.35s ease;
 }
 
 .desert-card:hover {
-    box-shadow: 0 8px 20px rgba(44, 44, 44, 0.08);
+    box-shadow: 0 8px 20px rgb(44 44 44 / 8%);
     transform: scale(1.05);
 }
 

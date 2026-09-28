@@ -1,4 +1,3 @@
-
 # ☕ [Morning in a Cup] — Landing Page
 
 [![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-0A66C2?style=flat&logo=githubpages&logoColor=white)](https://your-username.github.io/rsschool-landing-page/)
@@ -39,7 +38,7 @@ The project features a warm coffee‑inspired palette, smooth interactions, and 
 ## Tech stack
 
 | Area          | Tools                                                |
-|---------------|------------------------------------------------------|
+| ------------- | ---------------------------------------------------- |
 | Markup        | HTML5                                                |
 | Styles        | CSS3 (Flexbox, Grid, custom properties, transitions) |
 | Interactivity | Vanilla JavaScript (ES6+)                            |
@@ -126,10 +125,11 @@ This repository follows the **Landing Page** assignment from the RS School Fulls
 - **Deployed via:** GitHub Pages
 - **Content in English**
 
-**Technical constraints:**  
-- Vanilla JavaScript only — no JS frameworks (React, Angular, Vue)  
-- No CSS frameworks (Bootstrap, Tailwind, etc.)  
-- No ready‑made slider, modal, or burger‑menu libraries  
+**Technical constraints:**
+
+- Vanilla JavaScript only — no JS frameworks (React, Angular, Vue)
+- No CSS frameworks (Bootstrap, Tailwind, etc.)
+- No ready‑made slider, modal, or burger‑menu libraries
 - CSS preprocessors (SASS/SCSS) and `modern-normalize` are allowed
 
 ## Contact

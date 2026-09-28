@@ -34,6 +34,7 @@
 .coffee__slider {
     --coffee-gap: 16px;
     --coffee-per-view: 3;
+
     min-width: 0;
 }
 
@@ -50,7 +51,8 @@
 }
 
 .coffee__slide {
-    flex: 0 0 calc((100% - (var(--coffee-per-view) - 1) * var(--coffee-gap)) / var(--coffee-per-view));
+    flex: 0 0
+        calc((100% - (var(--coffee-per-view) - 1) * var(--coffee-gap)) / var(--coffee-per-view));
     min-width: 0;
 }
 
@@ -73,7 +75,9 @@
     border-radius: 50%;
     background-color: var(--color-surface);
     color: var(--color-text-dark);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 .coffee__arrow:hover {
@@ -93,18 +97,20 @@
     height: 10px;
     padding: 0;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.4);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgb(255 255 255 / 40%);
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .coffee__dot:hover {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgb(255 255 255 / 75%);
 }
 
 .coffee__dot.is-active,
 .coffee__dot.is-active:hover {
     background-color: var(--color-white);
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 0 3px rgb(255 255 255 / 35%);
 }
 
 .coffee__arrow:focus-visible,

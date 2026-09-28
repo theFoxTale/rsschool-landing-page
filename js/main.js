@@ -6,7 +6,7 @@ let toggle;
 function readTheme() {
     try {
         return localStorage.getItem(STORAGE_KEY) === 'dark' ? 'dark' : 'light';
-    } catch (error) {
+    } catch {
         return 'light';
     }
 }
@@ -14,7 +14,8 @@ function readTheme() {
 function saveTheme(theme) {
     try {
         localStorage.setItem(STORAGE_KEY, theme);
-    } catch (error) {
+    } catch {
+        // Storage can be blocked; the theme still applies for this visit.
     }
 }
 
@@ -40,7 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     toggle.addEventListener('click', function () {
-        const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        const next =
+            document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
         applyTheme(next);
         saveTheme(next);
     });
