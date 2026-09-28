@@ -9,6 +9,18 @@
     transition: background-color 0.3s ease;
 }
 
+/* Меню фиксирует body, и sticky-хедер уезжает вверх. Пока меню открыто, держим его у края экрана. */
+body.is-scroll-locked {
+    padding-top: var(--header-height);
+}
+
+body.is-scroll-locked .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
 .header__container {
     display: flex;
     justify-content: space-between;
@@ -70,6 +82,10 @@
         padding: 20px;
         background-color: var(--color-bg-main);
         box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+        max-height: calc(100vh - var(--header-height));
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        touch-action: pan-y;
         transform: translateX(100%);
         visibility: hidden;
         pointer-events: none;
