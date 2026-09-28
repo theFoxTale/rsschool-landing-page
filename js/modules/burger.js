@@ -1,14 +1,33 @@
+const BURGER_ACTIVE_CLASS = 'active';
+
+let burger;
+let header;
+
+//---------------------------------------------------------------------------
+
+function setMenuOpen(isOpen) {
+    header.classList.toggle(BURGER_ACTIVE_CLASS, isOpen);
+    burger.classList.toggle(BURGER_ACTIVE_CLASS, isOpen);
+    burger.setAttribute('aria-expanded', String(isOpen));
+    burger.setAttribute('aria-label', isOpen ? 'Close a menu' : 'Open a menu');
+}
+
+//---------------------------------------------------------------------------
+
 document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.querySelector('.burger');
-    const header = document.querySelector('.header__nav');
+    burger = document.querySelector('.burger');
+    header = document.querySelector('.header__nav');
     if (!burger || !header) return;
 
     burger.addEventListener('click', () => {
-        const isOpen = header.classList.toggle('active');
+        const isMenuOpen = header.classList.contains(BURGER_ACTIVE_CLASS);
+        setMenuOpen(!isMenuOpen);
+    });
 
-        burger.classList.toggle('active', isOpen);
-
-        burger.setAttribute('aria-expanded', String(isOpen));
-        burger.setAttribute('aria-label', isOpen ? 'Close a menu' : 'Open a menu');
+    document.addEventListener('keydown', (event) => {
+        const isMenuOpen = header.classList.contains(BURGER_ACTIVE_CLASS);
+        if (event.key === 'Escape' && isMenuOpen) {
+            setMenuOpen(false);
+        }
     });
 });
