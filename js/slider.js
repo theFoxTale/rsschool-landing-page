@@ -170,5 +170,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     update(false);
-    new ResizeObserver(() => update(false)).observe(viewport);
+
+    /**
+     * Пересчитывает состояние слайдера при изменении размера viewport.
+     * Срабатывает на ресайз окна, смену брейкпоинта (--coffee-per-view)
+     * и любые изменения размеров контейнера, а также один раз сразу
+     * после observe() — с текущим размером.
+     *
+     * update(false) — без анимации: при ресайзе плавный сдвиг выглядит дёргано,
+     * а позиция трека всё равно пересчитывается от новой ширины.
+     */
+    const viewportResizeObserver = new ResizeObserver(() => update(false));
+    viewportResizeObserver.observe(viewport);
 });
