@@ -8,3 +8,4 @@
 *.scss text eol=lf
 *.mjs text eol=lf
 *.md text eol=lf
+.husky/** text eol=lf
