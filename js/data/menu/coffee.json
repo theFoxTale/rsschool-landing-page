@@ -1,0 +1,114 @@
+{
+    "category": "coffee",
+    "label": "Coffee",
+    "items": [
+        {
+            "id": "matcha-latte",
+            "category": "coffee",
+            "title": "Matcha Latte",
+            "description": "Green harmony",
+            "price": 4.8,
+            "currency": "USD",
+            "image": "assets/images/coffee/Matcha%20Latte.webp",
+            "alt": "Matcha latte with leaf latte art, top view",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "flat-white",
+            "category": "coffee",
+            "title": "Flat White",
+            "description": "Silky and bold",
+            "price": 4.2,
+            "currency": "USD",
+            "image": "assets/images/coffee/Flat%20White.webp",
+            "alt": "Flat white in a cup, top view",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "cappuccino",
+            "category": "coffee",
+            "title": "Cappuccino",
+            "description": "Foamy and warm",
+            "price": 4.1,
+            "currency": "USD",
+            "image": "assets/images/coffee/Cappuccino.webp",
+            "alt": "Cappuccino with cocoa on milk foam, top view",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "classic-latte",
+            "category": "coffee",
+            "title": "Classic Latte",
+            "description": "Smooth and creamy",
+            "price": 4.4,
+            "currency": "USD",
+            "image": "assets/images/coffee/Classic%20Latte.webp",
+            "alt": "Classic latte in a cup, top view",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "espresso",
+            "category": "coffee",
+            "title": "Espresso",
+            "description": "Short and intense",
+            "price": 2.9,
+            "currency": "USD",
+            "image": "assets/images/coffee/Espresso.webp",
+            "alt": "Espresso in a red cup, top view",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "mocha",
+            "category": "coffee",
+            "title": "Mocha",
+            "description": "Cocoa and milk",
+            "price": 4.7,
+            "currency": "USD",
+            "image": "assets/images/coffee/Mocha.webp",
+            "alt": "Mocha in a cup, top view",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "cold-brew",
+            "category": "coffee",
+            "title": "Cold Brew",
+            "description": "Smooth and mellow",
+            "price": 4.3,
+            "currency": "USD",
+            "image": "assets/images/coffee/Cold%20Brew.webp",
+            "alt": "Cold brew in a glass, top view",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "iced-latte",
+            "category": "coffee",
+            "title": "Iced Latte",
+            "description": "Cool and milky",
+            "price": 4.5,
+            "currency": "USD",
+            "image": "assets/images/coffee/Iced%20Latte.webp",
+            "alt": "Iced latte in a glass, top view",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "iced-matcha-latte",
+            "category": "coffee",
+            "title": "Iced Matcha Latte",
+            "description": "Iced and refreshing",
+            "price": 4.9,
+            "currency": "USD",
+            "image": "assets/images/coffee/Iced%20Matcha%20Latte.webp",
+            "alt": "Iced matcha latte in a glass, top view",
+            "width": 1024,
+            "height": 1024
+        }
+    ]
+}

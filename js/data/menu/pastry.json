@@ -1,0 +1,114 @@
+{
+    "category": "pastry",
+    "label": "Pastry",
+    "items": [
+        {
+            "id": "strawberry-cupcake",
+            "category": "pastry",
+            "title": "Strawberry cupcake",
+            "description": "Cream and fresh berries",
+            "price": 4.5,
+            "currency": "USD",
+            "image": "assets/images/deserts/cupcake.webp",
+            "alt": "Red velvet cupcakes topped with cream and fresh strawberries",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "lemon-cupcake",
+            "category": "pastry",
+            "title": "Lemon cupcake",
+            "description": "Bright citrus sponge",
+            "price": 4.2,
+            "currency": "USD",
+            "image": "assets/images/deserts/lemon_cupcake.webp",
+            "alt": "Lemon cupcake",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "chocolate-cupcake",
+            "category": "pastry",
+            "title": "Chocolate cupcake",
+            "description": "Cocoa sponge and cream",
+            "price": 4.4,
+            "currency": "USD",
+            "image": "assets/images/deserts/shoko_cupcaje.webp",
+            "alt": "Chocolate cupcake",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "pistachio-cookies",
+            "category": "pastry",
+            "title": "Pistachio cookies",
+            "description": "Raspberry and pistachio",
+            "price": 3.8,
+            "currency": "USD",
+            "image": "assets/images/deserts/cookies.webp",
+            "alt": "Pistachio cookies topped with raspberries and crushed nuts",
+            "width": 1152,
+            "height": 1152
+        },
+        {
+            "id": "macarons",
+            "category": "pastry",
+            "title": "Macarons",
+            "description": "Light shells and ganache",
+            "price": 4.6,
+            "currency": "USD",
+            "image": "assets/images/deserts/macaroons.webp",
+            "alt": "Macarons",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "shortbread",
+            "category": "pastry",
+            "title": "Shortbread",
+            "description": "Buttery and crumbly",
+            "price": 3.4,
+            "currency": "USD",
+            "image": "assets/images/deserts/korzhiki.webp",
+            "alt": "Shortbread cookies",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "profiteroles",
+            "category": "pastry",
+            "title": "Profiteroles",
+            "description": "Choux buns with cream",
+            "price": 4.8,
+            "currency": "USD",
+            "image": "assets/images/deserts/profitroli.webp",
+            "alt": "Profiteroles",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "wafer-rolls",
+            "category": "pastry",
+            "title": "Wafer rolls",
+            "description": "Crisp tubes with filling",
+            "price": 3.9,
+            "currency": "USD",
+            "image": "assets/images/deserts/trubochki.webp",
+            "alt": "Wafer rolls",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "zephyr",
+            "category": "pastry",
+            "title": "Zephyr",
+            "description": "Soft fruit meringue",
+            "price": 3.7,
+            "currency": "USD",
+            "image": "assets/images/deserts/zefir.webp",
+            "alt": "Zephyr",
+            "width": 1024,
+            "height": 1024
+        }
+    ]
+}

@@ -1,4 +1,14 @@
+import { MenuItem } from '../classes/MenuItem.js';
+
+import coffee from '../data/menu/coffee.json';
+import cakes from '../data/menu/cakes.json';
+import pastry from '../data/menu/pastry.json';
+
 import '../../scss/pages/_catalog.scss';
+
+const menuGroups = [coffee, cakes, pastry];
+
+//---------------------------------------------------------------------------
 
 let rootElement;
 
@@ -29,6 +39,8 @@ function render() {
         card.hidden = index >= visibleCount;
     });
 
+    if (!moreWrap || !moreButton) return;
+
     const hasMore = matching.length > visibleCount;
     moreWrap.hidden = !hasMore;
     moreButton.hidden = !hasMore;
@@ -47,18 +59,32 @@ function setCategory(nextCategory) {
     render();
 }
 
+function renderCards(grid) {
+    const fragment = document.createDocumentFragment();
+
+    menuGroups.forEach((group) => {
+        group.items.forEach((item) => {
+            const card = new MenuItem({ ...item, category: group.category }).render();
+            fragment.append(card);
+        });
+    });
+
+    grid.replaceChildren(fragment);
+}
+
 //---------------------------------------------------------------------------
 
 function init() {
     rootElement = document.querySelector('[data-catalog]');
-    if (!rootElement) return;
+    const grid = rootElement?.querySelector('.catalog__grid');
+    if (!rootElement || !grid) return;
+
+    renderCards(grid);
 
     buttons = [...rootElement.querySelectorAll('[data-category-button]')];
-    cards = [...rootElement.querySelectorAll('[data-category]')];
+    cards = [...grid.querySelectorAll('[data-category]')];
     moreWrap = rootElement.querySelector('[data-show-more-wrap]');
     moreButton = rootElement.querySelector('[data-show-more]');
-
-    if (!moreWrap || !moreButton) return;
 
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
@@ -66,7 +92,7 @@ function init() {
         });
     });
 
-    moreButton.addEventListener('click', () => {
+    moreButton?.addEventListener('click', () => {
         visibleCount += pageSize;
         render();
     });

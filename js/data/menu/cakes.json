@@ -1,0 +1,114 @@
+{
+    "category": "cakes",
+    "label": "Cakes",
+    "items": [
+        {
+            "id": "honey-cake",
+            "category": "cakes",
+            "title": "Honey cake",
+            "description": "Soft honey layers",
+            "price": 5.2,
+            "currency": "USD",
+            "image": "assets/images/deserts/medovik.webp",
+            "alt": "Slice of layered honey cake with a strawberry on top",
+            "width": 1218,
+            "height": 1218
+        },
+        {
+            "id": "napoleon",
+            "category": "cakes",
+            "title": "Napoleon",
+            "description": "Flaky layers and custard",
+            "price": 5.4,
+            "currency": "USD",
+            "image": "assets/images/deserts/napoleon.webp",
+            "alt": "Napoleon cake",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "tiramisu",
+            "category": "cakes",
+            "title": "Tiramisu",
+            "description": "Coffee, cream, and cocoa",
+            "price": 5.6,
+            "currency": "USD",
+            "image": "assets/images/deserts/tiramisu.webp",
+            "alt": "Tiramisu",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "mango-cake",
+            "category": "cakes",
+            "title": "Mango cake",
+            "description": "Sponge and ripe mango",
+            "price": 5.5,
+            "currency": "USD",
+            "image": "assets/images/deserts/mango_cake.webp",
+            "alt": "Mango cake",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "nut-cake",
+            "category": "cakes",
+            "title": "Nut cake",
+            "description": "Toasted nuts and cream",
+            "price": 5.3,
+            "currency": "USD",
+            "image": "assets/images/deserts/nuts_cake.webp",
+            "alt": "Nut cake",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "pumpkin-cake",
+            "category": "cakes",
+            "title": "Pumpkin cake",
+            "description": "Warm spice and cream",
+            "price": 5.1,
+            "currency": "USD",
+            "image": "assets/images/deserts/pumpkin.webp",
+            "alt": "Pumpkin cake",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "mille-feuille",
+            "category": "cakes",
+            "title": "Mille-feuille",
+            "description": "Pastry, cream, and raspberries",
+            "price": 5.4,
+            "currency": "USD",
+            "image": "assets/images/deserts/milfei.webp",
+            "alt": "Mille-feuille with cream and raspberries",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "pavlova",
+            "category": "cakes",
+            "title": "Pavlova",
+            "description": "Crisp meringue and berries",
+            "price": 5.0,
+            "currency": "USD",
+            "image": "assets/images/deserts/pavlova.webp",
+            "alt": "Pavlova",
+            "width": 1024,
+            "height": 1024
+        },
+        {
+            "id": "strawberry-cake",
+            "category": "cakes",
+            "title": "Strawberry cake",
+            "description": "Sponge, cream, and berries",
+            "price": 5.2,
+            "currency": "USD",
+            "image": "assets/images/deserts/freze.webp",
+            "alt": "Slice of strawberry cream cake",
+            "width": 1024,
+            "height": 1024
+        }
+    ]
+}
