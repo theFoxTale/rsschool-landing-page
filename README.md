@@ -65,11 +65,18 @@ rsschool-landing-page/
 │   ├── themes/
 │   └── vendors/
 ├── js/
+│   ├── classes/
+│   │   └── MenuItem.js     # Catalog card built from menu data
+│   ├── data/
+│   │   └── menu/
+│   │       ├── coffee.json # Coffee items
+│   │       ├── cakes.json  # Cake items
+│   │       └── pastry.json # Pastry items
 │   ├── modules/
 │   │   ├── main.js         # Shared styles; enables smooth scroll after load
 │   │   ├── theme.js        # Light and dark theme toggle
 │   │   ├── slider.js       # Drinks carousel
-│   │   └── catalog.js      # Category filters and show more
+│   │   ├── catalog.js      # Category filters and show more
 │   │   └── burger.js       # Burger menu and navigation
 │   └── pages/
 │       ├── home.js         # Home page entry
@@ -82,7 +89,10 @@ rsschool-landing-page/
 ├── docs/
 │   ├── idea.jpg                # The image that inspired me for this project
 │   ├── README-part-1.md        # Part 1 description (markup & themes)
+│   ├── README-part-1-ru.md     # Part 1 description in Russian
 │   ├── README-part-2.md        # Part 2 description (interactivity)
+│   ├── README-part-2-ru.md     # Part 2 description in Russian
+│   └── README_ru.md            # Project README in Russian
 └── .gitignore
 ```
 
