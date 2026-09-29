@@ -7,11 +7,24 @@ const CURRENCY_SYMBOLS = {
 };
 
 export class MenuItem {
-    constructor({ id, category, title, description, price, currency, image, alt, width, height }) {
+    constructor({
+        id,
+        category,
+        title,
+        description,
+        longDescription,
+        price,
+        currency,
+        image,
+        alt,
+        width,
+        height,
+    }) {
         this.id = id;
         this.category = category;
         this.title = title;
         this.description = description;
+        this.longDescription = longDescription;
 
         this.price = price;
         this.currency = currency;
@@ -113,9 +126,16 @@ export class MenuItem {
 
         if (this.description) {
             const description = document.createElement('p');
-            description.className = 'menu-modal__text';
+            description.className = 'menu-modal__subtitle';
             description.textContent = this.description;
             body.append(description);
+        }
+
+        if (this.longDescription) {
+            const longDescription = document.createElement('p');
+            longDescription.className = 'menu-modal__text';
+            longDescription.textContent = this.longDescription;
+            body.append(longDescription);
         }
 
         if (this.price != null && this.currency) {
