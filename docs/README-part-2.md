@@ -36,6 +36,8 @@
 
 ### 5. Card Display Management — 13 points
 
+Set size: when the window width is greater than 768px, eight cards of the active category are displayed. At a width of 768px or less, four cards are shown initially, and if there are more, a button is displayed. After clicking, all cards are shown and the button is hidden.
+
 - [ ] On load, the initial set of cards is displayed. Controls are available only if part of the cards in the active category did not fit into this set: **+5**.
 - [ ] The button shows additional or all remaining cards and hides after all cards are displayed; selecting a pagination number shows the corresponding set of cards and visually highlights the selected number. Updating occurs without page reload: **+4**.
 - [ ] When switching categories, the initial set of cards is displayed; if pagination is used, the first number becomes active: **+2**.
