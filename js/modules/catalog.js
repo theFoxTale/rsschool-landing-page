@@ -17,15 +17,23 @@ let cards;
 let moreWrap;
 let moreButton;
 
-const pageSize = 8;
+const MOBILE_QUERY = '(max-width: 768px)';
+const DESKTOP_PAGE_SIZE = 8;
+const MOBILE_PAGE_SIZE = 4;
 
 let category = 'coffee';
-let visibleCount = pageSize;
+let visibleCount = MOBILE_PAGE_SIZE;
+let mobileQuery;
 
 //---------------------------------------------------------------------------
 
 function matchingCards() {
     return cards.filter((card) => card.dataset.category === category);
+}
+
+function initialVisibleCount(total) {
+    const pageSize = mobileQuery.matches ? MOBILE_PAGE_SIZE : DESKTOP_PAGE_SIZE;
+    return Math.min(pageSize, total);
 }
 
 function render() {
@@ -48,7 +56,7 @@ function render() {
 
 function setCategory(nextCategory) {
     category = nextCategory;
-    visibleCount = pageSize;
+    visibleCount = initialVisibleCount(matchingCards().length);
 
     buttons.forEach((button) => {
         const active = button.dataset.categoryButton === category;
@@ -56,6 +64,11 @@ function setCategory(nextCategory) {
         button.setAttribute('aria-pressed', String(active));
     });
 
+    render();
+}
+
+function onViewportChange() {
+    visibleCount = initialVisibleCount(matchingCards().length);
     render();
 }
 
@@ -93,9 +106,12 @@ function init() {
     });
 
     moreButton?.addEventListener('click', () => {
-        visibleCount += pageSize;
+        visibleCount = matchingCards().length;
         render();
     });
+
+    mobileQuery = window.matchMedia(MOBILE_QUERY);
+    mobileQuery.addEventListener('change', onViewportChange);
 
     setCategory(category);
 }
