@@ -7,108 +7,453 @@
             "category": "coffee",
             "title": "Matcha Latte",
             "description": "Green harmony",
+            "longDescription": "A vivid emerald stream of ceremonial-grade matcha, whisked to a velvet foam and poured over gently steamed milk. The first sip is spring itself — grassy, sweet, quietly bitter — softening into a warm, creamy finish. Somewhere between a tea ceremony and a morning ritual, this cup slows the world down.",
+            "badge": "signature",
             "price": 4.8,
             "currency": "USD",
             "image": "assets/images/coffee/Matcha%20Latte.webp",
             "alt": "Matcha latte with leaf latte art, top view",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "m",
+            "defaultMilk": "cow",
+            "sizes": [
+                {
+                    "id": "s",
+                    "label": "S",
+                    "volume": "200 ml",
+                    "priceDelta": -0.7,
+                    "calories": 120
+                },
+                { "id": "m", "label": "M", "volume": "300 ml", "priceDelta": 0, "calories": 180 },
+                { "id": "l", "label": "L", "volume": "400 ml", "priceDelta": 0.8, "calories": 240 }
+            ],
+            "milks": [
+                { "id": "cow", "label": "Cow milk", "priceDelta": 0, "caloriesDelta": 0 },
+                { "id": "oat", "label": "Oat milk", "priceDelta": 0.7, "caloriesDelta": 10 },
+                { "id": "almond", "label": "Almond milk", "priceDelta": 0.7, "caloriesDelta": -30 },
+                {
+                    "id": "hazelnut",
+                    "label": "Hazelnut milk",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": -20
+                }
+            ],
+            "additives": [
+                { "id": "honey", "label": "Honey", "priceDelta": 0.5, "caloriesDelta": 60 },
+                {
+                    "id": "vanilla-syrup",
+                    "label": "Vanilla syrup",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 50
+                },
+                {
+                    "id": "oat-milk",
+                    "label": "Extra oat milk",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 30
+                }
+            ],
+            "allergens": ["milk", "nuts"]
         },
         {
             "id": "flat-white",
             "category": "coffee",
             "title": "Flat White",
             "description": "Silky and bold",
+            "longDescription": "Velvety microfoam folded into a double ristretto, poured slowly until the surface turns to liquid silk. Stronger than a latte, softer than a cappuccino — a cup with no room for compromise. Tiny, intense, and gone far too soon; that is precisely the point.",
+            "badge": "bestseller",
             "price": 4.2,
             "currency": "USD",
             "image": "assets/images/coffee/Flat%20White.webp",
             "alt": "Flat white in a cup, top view",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "m",
+            "defaultMilk": "cow",
+            "sizes": [
+                { "id": "s", "label": "S", "volume": "180 ml", "priceDelta": -0.4, "calories": 90 },
+                { "id": "m", "label": "M", "volume": "240 ml", "priceDelta": 0, "calories": 120 }
+            ],
+            "milks": [
+                { "id": "cow", "label": "Cow milk", "priceDelta": 0, "caloriesDelta": 0 },
+                { "id": "oat", "label": "Oat milk", "priceDelta": 0.7, "caloriesDelta": 10 },
+                { "id": "almond", "label": "Almond milk", "priceDelta": 0.7, "caloriesDelta": -30 },
+                {
+                    "id": "hazelnut",
+                    "label": "Hazelnut milk",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": -20
+                }
+            ],
+            "additives": [
+                {
+                    "id": "extra-shot",
+                    "label": "Extra shot",
+                    "priceDelta": 0.9,
+                    "caloriesDelta": 3
+                },
+                {
+                    "id": "brown-sugar",
+                    "label": "Brown sugar",
+                    "priceDelta": 0.2,
+                    "caloriesDelta": 30
+                },
+                { "id": "cinnamon", "label": "Cinnamon", "priceDelta": 0.3, "caloriesDelta": 5 }
+            ],
+            "allergens": ["milk", "nuts"]
         },
         {
             "id": "cappuccino",
             "category": "coffee",
             "title": "Cappuccino",
             "description": "Foamy and warm",
+            "longDescription": "A perfect trinity: dark espresso, steamed milk, and a crown of airy foam dusted with cocoa. The first taste is bold and roasted, the second — light as a cloud. A small ceremony in a warm cup, made for the quiet ten minutes you owe yourself.",
             "price": 4.1,
             "currency": "USD",
             "image": "assets/images/coffee/Cappuccino.webp",
             "alt": "Cappuccino with cocoa on milk foam, top view",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "m",
+            "defaultMilk": "cow",
+            "sizes": [
+                { "id": "s", "label": "S", "volume": "200 ml", "priceDelta": -0.6, "calories": 90 },
+                { "id": "m", "label": "M", "volume": "300 ml", "priceDelta": 0, "calories": 120 },
+                { "id": "l", "label": "L", "volume": "400 ml", "priceDelta": 0.7, "calories": 150 }
+            ],
+            "milks": [
+                { "id": "cow", "label": "Cow milk", "priceDelta": 0, "caloriesDelta": 0 },
+                { "id": "oat", "label": "Oat milk", "priceDelta": 0.7, "caloriesDelta": 10 },
+                { "id": "almond", "label": "Almond milk", "priceDelta": 0.7, "caloriesDelta": -30 },
+                {
+                    "id": "hazelnut",
+                    "label": "Hazelnut milk",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": -20
+                }
+            ],
+            "additives": [
+                { "id": "cocoa", "label": "Cocoa dusting", "priceDelta": 0.3, "caloriesDelta": 20 },
+                { "id": "cinnamon", "label": "Cinnamon", "priceDelta": 0.3, "caloriesDelta": 5 },
+                {
+                    "id": "hazelnut-syrup",
+                    "label": "Hazelnut syrup",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 50
+                }
+            ],
+            "allergens": ["milk", "nuts"]
         },
         {
             "id": "classic-latte",
             "category": "coffee",
             "title": "Classic Latte",
             "description": "Smooth and creamy",
+            "longDescription": "Espresso rounded out by a long, slow pour of silky steamed milk, finished with a thin veil of foam. Gentle, creamy, and endlessly drinkable — the comfort of a familiar melody in a cup. Simple on the surface, precise underneath.",
             "price": 4.4,
             "currency": "USD",
             "image": "assets/images/coffee/Classic%20Latte.webp",
             "alt": "Classic latte in a cup, top view",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "m",
+            "defaultMilk": "cow",
+            "sizes": [
+                {
+                    "id": "s",
+                    "label": "S",
+                    "volume": "200 ml",
+                    "priceDelta": -0.6,
+                    "calories": 120
+                },
+                { "id": "m", "label": "M", "volume": "300 ml", "priceDelta": 0, "calories": 170 },
+                { "id": "l", "label": "L", "volume": "400 ml", "priceDelta": 0.8, "calories": 220 }
+            ],
+            "milks": [
+                { "id": "cow", "label": "Cow milk", "priceDelta": 0, "caloriesDelta": 0 },
+                { "id": "oat", "label": "Oat milk", "priceDelta": 0.7, "caloriesDelta": 10 },
+                { "id": "almond", "label": "Almond milk", "priceDelta": 0.7, "caloriesDelta": -30 },
+                {
+                    "id": "hazelnut",
+                    "label": "Hazelnut milk",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": -20
+                }
+            ],
+            "additives": [
+                {
+                    "id": "vanilla-syrup",
+                    "label": "Vanilla syrup",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 50
+                },
+                {
+                    "id": "caramel-syrup",
+                    "label": "Caramel syrup",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 50
+                },
+                { "id": "extra-shot", "label": "Extra shot", "priceDelta": 0.9, "caloriesDelta": 3 }
+            ],
+            "allergens": ["milk", "nuts"]
         },
         {
             "id": "espresso",
             "category": "coffee",
             "title": "Espresso",
             "description": "Short and intense",
+            "longDescription": "Thirty millilitres of pure intent. A dense, honey-coloured crema, a scent of dark chocolate and toasted hazelnut, a taste that hits the palate and expands. No milk, no sugar to hide behind — just the bean, the roast, and the machine at its best.",
             "price": 2.9,
             "currency": "USD",
             "image": "assets/images/coffee/Espresso.webp",
             "alt": "Espresso in a red cup, top view",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "s",
+            "defaultMilk": null,
+            "sizes": [
+                {
+                    "id": "s",
+                    "label": "S",
+                    "volume": "30 ml · single",
+                    "priceDelta": 0,
+                    "calories": 3
+                },
+                {
+                    "id": "m",
+                    "label": "M",
+                    "volume": "60 ml · double",
+                    "priceDelta": 1.0,
+                    "calories": 6
+                }
+            ],
+            "milks": [],
+            "additives": [
+                {
+                    "id": "brown-sugar",
+                    "label": "Brown sugar",
+                    "priceDelta": 0.2,
+                    "caloriesDelta": 30
+                },
+                {
+                    "id": "lemon-zest",
+                    "label": "Lemon zest",
+                    "priceDelta": 0.3,
+                    "caloriesDelta": 2
+                },
+                {
+                    "id": "whipped-cream",
+                    "label": "Whipped cream (con panna)",
+                    "priceDelta": 0.5,
+                    "caloriesDelta": 80
+                }
+            ],
+            "allergens": ["milk"]
         },
         {
             "id": "mocha",
             "category": "coffee",
             "title": "Mocha",
             "description": "Cocoa and milk",
+            "longDescription": "Bittersweet cocoa melted into espresso, then met by steamed milk and a cloud of whipped cream. Part dessert, part coffee, entirely unapologetic. Warm chocolate lingers on the tongue long after the cup is empty.",
+            "badge": "seasonal",
             "price": 4.7,
             "currency": "USD",
             "image": "assets/images/coffee/Mocha.webp",
             "alt": "Mocha in a cup, top view",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "m",
+            "defaultMilk": "cow",
+            "sizes": [
+                {
+                    "id": "s",
+                    "label": "S",
+                    "volume": "200 ml",
+                    "priceDelta": -0.6,
+                    "calories": 220
+                },
+                { "id": "m", "label": "M", "volume": "300 ml", "priceDelta": 0, "calories": 290 },
+                { "id": "l", "label": "L", "volume": "400 ml", "priceDelta": 0.9, "calories": 360 }
+            ],
+            "milks": [
+                { "id": "cow", "label": "Cow milk", "priceDelta": 0, "caloriesDelta": 0 },
+                { "id": "oat", "label": "Oat milk", "priceDelta": 0.7, "caloriesDelta": 10 },
+                { "id": "almond", "label": "Almond milk", "priceDelta": 0.7, "caloriesDelta": -30 },
+                {
+                    "id": "hazelnut",
+                    "label": "Hazelnut milk",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": -20
+                }
+            ],
+            "additives": [
+                {
+                    "id": "marshmallow",
+                    "label": "Marshmallow",
+                    "priceDelta": 0.5,
+                    "caloriesDelta": 40
+                },
+                {
+                    "id": "extra-cocoa",
+                    "label": "Extra cocoa",
+                    "priceDelta": 0.4,
+                    "caloriesDelta": 30
+                },
+                {
+                    "id": "whipped-cream",
+                    "label": "Whipped cream",
+                    "priceDelta": 0.5,
+                    "caloriesDelta": 80
+                }
+            ],
+            "allergens": ["milk", "nuts", "soy"]
         },
         {
             "id": "cold-brew",
             "category": "coffee",
             "title": "Cold Brew",
             "description": "Smooth and mellow",
+            "longDescription": "Steeped for eighteen patient hours in cold water, never touched by heat. The result is mellow, naturally sweet, and almost impossibly smooth — all the depth of coffee, none of the bitterness. Served over ice, it drinks like slow summer afternoons.",
             "price": 4.3,
             "currency": "USD",
             "image": "assets/images/coffee/Cold%20Brew.webp",
             "alt": "Cold brew in a glass, top view",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "m",
+            "defaultMilk": null,
+            "sizes": [
+                { "id": "m", "label": "M", "volume": "300 ml", "priceDelta": 0, "calories": 5 },
+                { "id": "l", "label": "L", "volume": "400 ml", "priceDelta": 0.8, "calories": 8 },
+                { "id": "xl", "label": "XL", "volume": "500 ml", "priceDelta": 1.5, "calories": 10 }
+            ],
+            "milks": [
+                { "id": "cow", "label": "Cow milk", "priceDelta": 0.4, "caloriesDelta": 130 },
+                { "id": "oat", "label": "Oat milk", "priceDelta": 0.7, "caloriesDelta": 140 },
+                { "id": "almond", "label": "Almond milk", "priceDelta": 0.7, "caloriesDelta": 100 },
+                {
+                    "id": "hazelnut",
+                    "label": "Hazelnut milk",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": 110
+                }
+            ],
+            "additives": [
+                {
+                    "id": "vanilla-syrup",
+                    "label": "Vanilla syrup",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 50
+                },
+                {
+                    "id": "oat-milk",
+                    "label": "Extra oat milk",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 30
+                },
+                {
+                    "id": "orange-zest",
+                    "label": "Orange zest",
+                    "priceDelta": 0.4,
+                    "caloriesDelta": 2
+                }
+            ],
+            "allergens": ["nuts"]
         },
         {
             "id": "iced-latte",
             "category": "coffee",
             "title": "Iced Latte",
             "description": "Cool and milky",
+            "longDescription": "A double shot poured over cold milk and crystal ice, swirling into marble patterns before your eyes. Cool, milky, and refreshing, with a clean espresso finish that cuts through the sweetness. The sound of ice shifting is half the pleasure.",
             "price": 4.5,
             "currency": "USD",
             "image": "assets/images/coffee/Iced%20Latte.webp",
             "alt": "Iced latte in a glass, top view",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "m",
+            "defaultMilk": "cow",
+            "sizes": [
+                { "id": "m", "label": "M", "volume": "350 ml", "priceDelta": 0, "calories": 130 },
+                { "id": "l", "label": "L", "volume": "450 ml", "priceDelta": 0.8, "calories": 170 }
+            ],
+            "milks": [
+                { "id": "cow", "label": "Cow milk", "priceDelta": 0, "caloriesDelta": 0 },
+                { "id": "oat", "label": "Oat milk", "priceDelta": 0.7, "caloriesDelta": 10 },
+                { "id": "almond", "label": "Almond milk", "priceDelta": 0.7, "caloriesDelta": -30 },
+                {
+                    "id": "hazelnut",
+                    "label": "Hazelnut milk",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": -20
+                }
+            ],
+            "additives": [
+                {
+                    "id": "salted-caramel",
+                    "label": "Salted caramel",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 60
+                },
+                {
+                    "id": "vanilla-syrup",
+                    "label": "Vanilla syrup",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 50
+                },
+                { "id": "cold-foam", "label": "Cold foam", "priceDelta": 0.8, "caloriesDelta": 40 }
+            ],
+            "allergens": ["milk", "nuts"]
         },
         {
             "id": "iced-matcha-latte",
             "category": "coffee",
             "title": "Iced Matcha Latte",
             "description": "Iced and refreshing",
+            "longDescription": "Ceremonial matcha whisked to a bright green froth, poured over cold milk and ice. Layers of jade and cream that you stir together yourself — grassy, sweet, and bracingly fresh. The kind of cold drink that wakes you up twice.",
+            "badge": "new",
             "price": 4.9,
             "currency": "USD",
             "image": "assets/images/coffee/Iced%20Matcha%20Latte.webp",
             "alt": "Iced matcha latte in a glass, top view",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "m",
+            "defaultMilk": "cow",
+            "sizes": [
+                { "id": "m", "label": "M", "volume": "350 ml", "priceDelta": 0, "calories": 180 },
+                { "id": "l", "label": "L", "volume": "450 ml", "priceDelta": 0.8, "calories": 230 }
+            ],
+            "milks": [
+                { "id": "cow", "label": "Cow milk", "priceDelta": 0, "caloriesDelta": 0 },
+                { "id": "oat", "label": "Oat milk", "priceDelta": 0.7, "caloriesDelta": 10 },
+                { "id": "almond", "label": "Almond milk", "priceDelta": 0.7, "caloriesDelta": -30 },
+                {
+                    "id": "hazelnut",
+                    "label": "Hazelnut milk",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": -20
+                }
+            ],
+            "additives": [
+                { "id": "honey", "label": "Honey", "priceDelta": 0.5, "caloriesDelta": 60 },
+                {
+                    "id": "coconut-milk",
+                    "label": "Coconut milk",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": 40
+                },
+                {
+                    "id": "vanilla-syrup",
+                    "label": "Vanilla syrup",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 50
+                }
+            ],
+            "allergens": ["milk", "nuts"]
         }
     ]
 }

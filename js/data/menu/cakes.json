@@ -7,108 +7,463 @@
             "category": "cakes",
             "title": "Honey cake",
             "description": "Soft honey layers",
+            "longDescription": "Eight paper-thin honey layers, baked one by one until amber, then rested under a blanket of sour-cream custard. Time does the work here: the cake softens overnight into something that yields under a fork like warm velvet. Sweet, faintly smoky, and impossible to stop at one slice.",
+            "badge": "signature",
             "price": 5.2,
             "currency": "USD",
             "image": "assets/images/deserts/medovik.webp",
             "alt": "Slice of layered honey cake with a strawberry on top",
             "width": 1218,
-            "height": 1218
+            "height": 1218,
+            "defaultSize": "slice",
+            "sizes": [
+                {
+                    "id": "slice",
+                    "label": "Slice",
+                    "weight": "120 g",
+                    "priceDelta": 0,
+                    "calories": 380
+                },
+                {
+                    "id": "whole",
+                    "label": "Whole cake",
+                    "weight": "900 g · 8 slices",
+                    "priceDelta": 24.8,
+                    "calories": 3040
+                }
+            ],
+            "toppings": [
+                {
+                    "id": "whipped-cream",
+                    "label": "Whipped cream",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 60
+                },
+                {
+                    "id": "berry-coulis",
+                    "label": "Berry coulis",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": 40
+                },
+                {
+                    "id": "powdered-sugar",
+                    "label": "Powdered sugar",
+                    "priceDelta": 0.2,
+                    "caloriesDelta": 10
+                }
+            ],
+            "allergens": ["gluten", "milk", "eggs"]
         },
         {
             "id": "napoleon",
             "category": "cakes",
             "title": "Napoleon",
             "description": "Flaky layers and custard",
+            "longDescription": "Hundreds of butter layers rolled, folded, and baked until they shatter. Between them, a slow-cooked vanilla custard that soaks just enough of the pastry to keep things interesting. The first bite is a crunch, the second — pure silk.",
             "price": 5.4,
             "currency": "USD",
             "image": "assets/images/deserts/napoleon.webp",
             "alt": "Napoleon cake",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "slice",
+            "sizes": [
+                {
+                    "id": "slice",
+                    "label": "Slice",
+                    "weight": "130 g",
+                    "priceDelta": 0,
+                    "calories": 420
+                },
+                {
+                    "id": "whole",
+                    "label": "Whole cake",
+                    "weight": "1000 g · 8 slices",
+                    "priceDelta": 26.6,
+                    "calories": 3360
+                }
+            ],
+            "toppings": [
+                {
+                    "id": "powdered-sugar",
+                    "label": "Powdered sugar",
+                    "priceDelta": 0.2,
+                    "caloriesDelta": 10
+                },
+                {
+                    "id": "berry-coulis",
+                    "label": "Berry coulis",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": 40
+                },
+                {
+                    "id": "chocolate-drizzle",
+                    "label": "Chocolate drizzle",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 70
+                }
+            ],
+            "allergens": ["gluten", "milk", "eggs"]
         },
         {
             "id": "tiramisu",
             "category": "cakes",
             "title": "Tiramisu",
             "description": "Coffee, cream, and cocoa",
+            "longDescription": "Savoiardi soaked in strong espresso and a whisper of marsala, layered with airy mascarpone cream and finished with a dark veil of cocoa. Cool, boozy, bittersweet — a dessert that tastes like the last hour of a long dinner. Best eaten slowly, with a small spoon.",
+            "badge": "bestseller",
             "price": 5.6,
             "currency": "USD",
             "image": "assets/images/deserts/tiramisu.webp",
             "alt": "Tiramisu",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "slice",
+            "sizes": [
+                {
+                    "id": "slice",
+                    "label": "Slice",
+                    "weight": "140 g",
+                    "priceDelta": 0,
+                    "calories": 400
+                },
+                {
+                    "id": "whole",
+                    "label": "Whole cake",
+                    "weight": "1100 g · 8 slices",
+                    "priceDelta": 28.4,
+                    "calories": 3200
+                }
+            ],
+            "toppings": [
+                {
+                    "id": "extra-cocoa",
+                    "label": "Extra cocoa",
+                    "priceDelta": 0.3,
+                    "caloriesDelta": 20
+                },
+                {
+                    "id": "chocolate-drizzle",
+                    "label": "Chocolate drizzle",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 70
+                },
+                {
+                    "id": "ice-cream",
+                    "label": "Vanilla ice cream scoop",
+                    "priceDelta": 1.5,
+                    "caloriesDelta": 140
+                }
+            ],
+            "allergens": ["gluten", "milk", "eggs"]
         },
         {
             "id": "mango-cake",
             "category": "cakes",
             "title": "Mango cake",
             "description": "Sponge and ripe mango",
+            "longDescription": "A featherlight sponge brushed with mango syrup, layered with whipped cream and chunks of ripe alphonso. Bright, tropical, and not too sweet — the kind of cake that disappears at a summer table before anyone notices. A thin mirror glaze on top catches the light.",
+            "badge": "new",
             "price": 5.5,
             "currency": "USD",
             "image": "assets/images/deserts/mango_cake.webp",
             "alt": "Mango cake",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "slice",
+            "sizes": [
+                {
+                    "id": "slice",
+                    "label": "Slice",
+                    "weight": "130 g",
+                    "priceDelta": 0,
+                    "calories": 350
+                },
+                {
+                    "id": "whole",
+                    "label": "Whole cake",
+                    "weight": "1000 g · 8 slices",
+                    "priceDelta": 27.5,
+                    "calories": 2800
+                }
+            ],
+            "toppings": [
+                {
+                    "id": "fresh-berries",
+                    "label": "Fresh mango cubes",
+                    "priceDelta": 1.2,
+                    "caloriesDelta": 40
+                },
+                {
+                    "id": "whipped-cream",
+                    "label": "Whipped cream",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 60
+                },
+                {
+                    "id": "berry-coulis",
+                    "label": "Passionfruit coulis",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": 40
+                }
+            ],
+            "allergens": ["gluten", "milk", "eggs"]
         },
         {
             "id": "nut-cake",
             "category": "cakes",
             "title": "Nut cake",
             "description": "Toasted nuts and cream",
+            "longDescription": "Hazelnuts and walnuts toasted until fragrant, ground into the sponge and folded through the cream. Deeply nutty, barely sweet, with a texture somewhere between a cake and a truffle. One slice is rich enough to feel like a whole dessert.",
             "price": 5.3,
             "currency": "USD",
             "image": "assets/images/deserts/nuts_cake.webp",
             "alt": "Nut cake",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "slice",
+            "sizes": [
+                {
+                    "id": "slice",
+                    "label": "Slice",
+                    "weight": "130 g",
+                    "priceDelta": 0,
+                    "calories": 450
+                },
+                {
+                    "id": "whole",
+                    "label": "Whole cake",
+                    "weight": "1000 g · 8 slices",
+                    "priceDelta": 25.7,
+                    "calories": 3600
+                }
+            ],
+            "toppings": [
+                {
+                    "id": "caramel-drizzle",
+                    "label": "Caramel drizzle",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 70
+                },
+                {
+                    "id": "whipped-cream",
+                    "label": "Whipped cream",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 60
+                },
+                {
+                    "id": "chocolate-drizzle",
+                    "label": "Chocolate drizzle",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 70
+                }
+            ],
+            "allergens": ["gluten", "milk", "eggs", "nuts"]
         },
         {
             "id": "pumpkin-cake",
             "category": "cakes",
             "title": "Pumpkin cake",
             "description": "Warm spice and cream",
+            "longDescription": "Roasted pumpkin purée folded into a spiced sponge with cinnamon, ginger, and a hint of clove, then layered with cream cheese frosting. Warming, gently earthy, and just sweet enough. Tastes like the first cold evening of autumn.",
+            "badge": "seasonal",
             "price": 5.1,
             "currency": "USD",
             "image": "assets/images/deserts/pumpkin.webp",
             "alt": "Pumpkin cake",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "slice",
+            "sizes": [
+                {
+                    "id": "slice",
+                    "label": "Slice",
+                    "weight": "130 g",
+                    "priceDelta": 0,
+                    "calories": 390
+                },
+                {
+                    "id": "whole",
+                    "label": "Whole cake",
+                    "weight": "1000 g · 8 slices",
+                    "priceDelta": 23.9,
+                    "calories": 3120
+                }
+            ],
+            "toppings": [
+                {
+                    "id": "whipped-cream",
+                    "label": "Whipped cream",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 60
+                },
+                {
+                    "id": "caramel-drizzle",
+                    "label": "Caramel drizzle",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 70
+                },
+                {
+                    "id": "powdered-sugar",
+                    "label": "Cinnamon sugar",
+                    "priceDelta": 0.2,
+                    "caloriesDelta": 10
+                }
+            ],
+            "allergens": ["gluten", "milk", "eggs"]
         },
         {
             "id": "mille-feuille",
             "category": "cakes",
             "title": "Mille-feuille",
             "description": "Pastry, cream, and raspberries",
+            "longDescription": "Three sheets of caramelised puff pastry, two layers of vanilla pastry cream, and a scatter of fresh raspberries for bite. Constructed, not baked — a small piece of architecture that collapses the moment you press a fork into it. That is exactly the point.",
             "price": 5.4,
             "currency": "USD",
             "image": "assets/images/deserts/milfei.webp",
             "alt": "Mille-feuille with cream and raspberries",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "slice",
+            "sizes": [
+                {
+                    "id": "slice",
+                    "label": "Slice",
+                    "weight": "120 g",
+                    "priceDelta": 0,
+                    "calories": 380
+                },
+                {
+                    "id": "whole",
+                    "label": "Whole cake",
+                    "weight": "900 g · 8 slices",
+                    "priceDelta": 26.6,
+                    "calories": 3040
+                }
+            ],
+            "toppings": [
+                {
+                    "id": "fresh-berries",
+                    "label": "Fresh raspberries",
+                    "priceDelta": 1.2,
+                    "caloriesDelta": 30
+                },
+                {
+                    "id": "powdered-sugar",
+                    "label": "Powdered sugar",
+                    "priceDelta": 0.2,
+                    "caloriesDelta": 10
+                },
+                {
+                    "id": "chocolate-drizzle",
+                    "label": "Chocolate drizzle",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 70
+                }
+            ],
+            "allergens": ["gluten", "milk", "eggs"]
         },
         {
             "id": "pavlova",
             "category": "cakes",
             "title": "Pavlova",
             "description": "Crisp meringue and berries",
+            "longDescription": "A meringue shell baked low and slow until the outside crackles like thin ice, soft as marshmallow within. Piled with lightly sweetened cream and whatever berries are best that week. Light enough to follow the heaviest dinner, and beautiful enough to photograph first.",
             "price": 5.0,
             "currency": "USD",
             "image": "assets/images/deserts/pavlova.webp",
             "alt": "Pavlova",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "slice",
+            "sizes": [
+                {
+                    "id": "slice",
+                    "label": "Slice",
+                    "weight": "110 g",
+                    "priceDelta": 0,
+                    "calories": 280
+                },
+                {
+                    "id": "whole",
+                    "label": "Whole cake",
+                    "weight": "850 g · 8 slices",
+                    "priceDelta": 23.0,
+                    "calories": 2240
+                }
+            ],
+            "toppings": [
+                {
+                    "id": "fresh-berries",
+                    "label": "Fresh berries",
+                    "priceDelta": 1.2,
+                    "caloriesDelta": 30
+                },
+                {
+                    "id": "berry-coulis",
+                    "label": "Berry coulis",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": 40
+                },
+                {
+                    "id": "whipped-cream",
+                    "label": "Extra cream",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 60
+                }
+            ],
+            "allergens": ["eggs", "milk"]
         },
         {
             "id": "strawberry-cake",
             "category": "cakes",
             "title": "Strawberry cake",
             "description": "Sponge, cream, and berries",
+            "longDescription": "Vanilla sponge soaked in strawberry syrup, layered with whipped cream and sliced fresh strawberries. Pink, soft, and uncomplicated — the birthday cake everyone remembers from childhood, made properly. Best cold, straight from the fridge.",
             "price": 5.2,
             "currency": "USD",
             "image": "assets/images/deserts/freze.webp",
             "alt": "Slice of strawberry cream cake",
             "width": 1024,
-            "height": 1024
+            "height": 1024,
+            "defaultSize": "slice",
+            "sizes": [
+                {
+                    "id": "slice",
+                    "label": "Slice",
+                    "weight": "130 g",
+                    "priceDelta": 0,
+                    "calories": 360
+                },
+                {
+                    "id": "whole",
+                    "label": "Whole cake",
+                    "weight": "1000 g · 8 slices",
+                    "priceDelta": 24.8,
+                    "calories": 2880
+                }
+            ],
+            "toppings": [
+                {
+                    "id": "fresh-berries",
+                    "label": "Fresh strawberries",
+                    "priceDelta": 1.2,
+                    "caloriesDelta": 30
+                },
+                {
+                    "id": "whipped-cream",
+                    "label": "Whipped cream",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 60
+                },
+                {
+                    "id": "berry-coulis",
+                    "label": "Strawberry coulis",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": 40
+                }
+            ],
+            "allergens": ["gluten", "milk", "eggs"]
         }
     ]
 }
