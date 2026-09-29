@@ -10,18 +10,28 @@ let lockedScrollY = 0;
 let touchStartY = 0;
 
 /**
- * Возвращает true, если открытое меню всё ещё может прокручиваться в указанном направлении.
- * Положительное значение deltaY соответствует прокрутке к нижней части списка.
- *
+ * Возвращает true, если открытое меню или модальное окно ещё может прокручиваться
+ * в указанном направлении.
+ * Положительное значение deltaY соответствует прокрутке к нижней части области.
  */
-function menuCanConsumeScroll(deltaY) {
-    if (header.scrollHeight <= header.clientHeight) return false;
+function regionCanConsumeScroll(region, deltaY) {
+    if (!region || region.scrollHeight <= region.clientHeight) return false;
 
-    const maxScroll = header.scrollHeight - header.clientHeight;
-    if (deltaY > 0) return header.scrollTop < maxScroll - 1;
-    if (deltaY < 0) return header.scrollTop > 0;
+    const maxScroll = region.scrollHeight - region.clientHeight;
+    if (deltaY > 0) return region.scrollTop < maxScroll - 1;
+    if (deltaY < 0) return region.scrollTop > 0;
 
     return false;
+}
+
+function eventTargetCanConsumeScroll(target, deltaY) {
+    if (!(target instanceof Element)) return false;
+
+    const region =
+        target.closest('.header__nav, .modal__content') ||
+        target.closest('.modal')?.querySelector('.modal__content');
+
+    return regionCanConsumeScroll(region, deltaY);
 }
 
 /**
@@ -124,10 +134,10 @@ document.addEventListener('DOMContentLoaded', () => {
         (event) => {
             if (!document.body.classList.contains('is-scroll-locked')) return;
             if (!PAGE_SCROLL_KEYS.includes(event.key)) return;
-            if (
-                header.contains(event.target) &&
-                menuCanConsumeScroll(menuScrollDeltaForKey(event.key))
-            ) {
+            if (event.key === ' ' && event.target.closest('button, a, input, textarea, select')) {
+                return;
+            }
+            if (eventTargetCanConsumeScroll(event.target, menuScrollDeltaForKey(event.key))) {
                 return;
             }
 
@@ -137,8 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     /**
-     * Пока меню открыто, страницу нельзя прокрутить колесом,
-     * но само меню можно прокручивать, если в нём есть контент, который не поместился на экран.
+     * Пока страница зафиксирована, её нельзя прокрутить колесом,
+     * но меню и модальное окно можно прокручивать, если контент не поместился на экран.
      *
      * Как только меню докручено до края — дальнейшая прокрутка колесом блокируется,
      * чтобы не дёргалась страница под ним.
@@ -147,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'wheel',
         (event) => {
             if (!document.body.classList.contains('is-scroll-locked')) return;
-            if (header.contains(event.target) && menuCanConsumeScroll(event.deltaY)) return;
+            if (eventTargetCanConsumeScroll(event.target, event.deltaY)) return;
             event.preventDefault();
         },
         { passive: false },
@@ -167,8 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     /**
-     * Пока меню открыто, страницу нельзя прокрутить тачпадом,
-     * но само меню можно прокручивать, если в нём есть контент, который не поместился на экран.
+     * Пока страница зафиксирована, её нельзя прокрутить касанием,
+     * но меню и модальное окно можно прокручивать, если контент не поместился на экран.
      *
      * Как только меню докручено до края — дальнейшая прокрутка тападом блокируется,
      * чтобы не дёргалась страница под ним.
@@ -182,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!touch) return;
 
             const deltaY = touchStartY - touch.clientY;
-            if (header.contains(event.target) && menuCanConsumeScroll(deltaY)) return;
+            if (eventTargetCanConsumeScroll(event.target, deltaY)) return;
 
             event.preventDefault();
         },

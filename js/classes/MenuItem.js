@@ -1,3 +1,5 @@
+import { ModalWindow } from './ModalWindow.js';
+
 const CURRENCY_SYMBOLS = {
     USD: '$',
     RUB: '₽',
@@ -60,11 +62,80 @@ export class MenuItem {
         if (this.price != null && this.currency) {
             const price = document.createElement('p');
             price.className = 'menu-card__price';
-            const symbol = CURRENCY_SYMBOLS[this.currency] ?? this.currency;
-            price.textContent = `${symbol}${this.price.toFixed(2)}`;
+            price.textContent = this.formatPrice();
             card.append(price);
         }
 
+        card.tabIndex = 0;
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-haspopup', 'dialog');
+        if (this.title) card.setAttribute('aria-label', this.title);
+
+        card.addEventListener('click', () => this.openModal());
+        card.addEventListener('keydown', (event) => {
+            if (event.key !== 'Enter' && event.key !== ' ') return;
+            event.preventDefault();
+            this.openModal();
+        });
+
         return card;
+    }
+
+    renderModalContent() {
+        const details = document.createElement('div');
+        details.className = 'menu-modal';
+
+        if (this.image) {
+            const media = document.createElement('div');
+            media.className = 'menu-modal__media';
+
+            const image = document.createElement('img');
+            image.className = 'menu-modal__image';
+            image.src = this.image;
+            image.alt = this.alt ?? '';
+            if (this.width) image.width = this.width;
+            if (this.height) image.height = this.height;
+
+            media.append(image);
+            details.append(media);
+        }
+
+        const body = document.createElement('div');
+        body.className = 'menu-modal__body';
+
+        if (this.title) {
+            const title = document.createElement('h2');
+            title.className = 'menu-modal__title';
+            title.dataset.modalTitle = '';
+            title.textContent = this.title;
+            body.append(title);
+        }
+
+        if (this.description) {
+            const description = document.createElement('p');
+            description.className = 'menu-modal__text';
+            description.textContent = this.description;
+            body.append(description);
+        }
+
+        if (this.price != null && this.currency) {
+            const price = document.createElement('p');
+            price.className = 'menu-modal__price';
+            price.textContent = this.formatPrice();
+            body.append(price);
+        }
+
+        details.append(body);
+        return details;
+    }
+
+    openModal() {
+        const modal = new ModalWindow('modal_menu');
+        modal.buildModal(this.renderModalContent());
+    }
+
+    formatPrice() {
+        const symbol = CURRENCY_SYMBOLS[this.currency] ?? this.currency;
+        return `${symbol}${Number(this.price).toFixed(2)}`;
     }
 }

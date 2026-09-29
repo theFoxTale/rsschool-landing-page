@@ -1,0 +1,79 @@
+@use '../abstracts/mixins' as *;
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: var(--color-overlay);
+}
+
+.modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: min(500px, 100%);
+    min-height: 120px;
+    max-height: 90%;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--color-bg-main);
+}
+
+.modal__content {
+    min-height: 0;
+    overflow: auto;
+    overscroll-behavior: contain;
+}
+
+.modal__close-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--color-surface);
+    color: var(--color-text-dark);
+    box-shadow: 0 2px 8px rgb(44 44 44 / 12%);
+    transition: color 0.3s ease;
+}
+
+.modal__close-icon:hover {
+    color: var(--color-accent);
+}
+
+.modal__close-icon:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+.modal_menu {
+    width: min(640px, 100%);
+    border: 1px solid var(--color-card-line);
+    border-radius: 20px;
+    background-color: var(--color-surface);
+    box-shadow: 0 16px 40px rgb(44 44 44 / 16%);
+}
+
+.modal_menu .modal__content {
+    padding: 16px;
+}
+
+@include respond-to('768') {
+    .modal_menu {
+        width: min(480px, 100%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal__close-icon {
+        transition: none;
+    }
+}
