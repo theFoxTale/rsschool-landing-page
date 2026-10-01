@@ -1,0 +1,538 @@
+{
+    "category": "pastry",
+    "label": "Pastry",
+    "items": [
+        {
+            "id": "strawberry-cupcake",
+            "category": "pastry",
+            "title": "Strawberry cupcake",
+            "description": "Cream and fresh berries",
+            "longDescription": "A red velvet crumb, deep and softly cocoa-scented, crowned with a swirl of cold cream cheese frosting. A whole strawberry sits on top like a small red jewel, its juice bleeding faintly into the cream. Sweet, tart, and just tall enough to feel like a small celebration.",
+            "badge": "bestseller",
+            "price": 4.5,
+            "currency": "USD",
+            "image": "assets/images/deserts/cupcake.webp",
+            "alt": "Red velvet cupcakes topped with cream and fresh strawberries",
+            "width": 1024,
+            "height": 1024,
+            "defaultSize": "single",
+            "sizes": [
+                {
+                    "id": "single",
+                    "label": "Single",
+                    "weight": "1 pc · 110 g",
+                    "priceDelta": 0,
+                    "calories": 320
+                },
+                {
+                    "id": "box4",
+                    "label": "Box of 4",
+                    "weight": "4 pcs · 440 g",
+                    "priceDelta": 11.5,
+                    "calories": 1280
+                },
+                {
+                    "id": "box6",
+                    "label": "Box of 6",
+                    "weight": "6 pcs · 660 g",
+                    "priceDelta": 18.0,
+                    "calories": 1920
+                }
+            ],
+            "extras": [
+                {
+                    "id": "fresh-strawberry",
+                    "label": "Extra strawberry",
+                    "priceDelta": 1.0,
+                    "caloriesDelta": 30
+                },
+                {
+                    "id": "extra-cream",
+                    "label": "Extra frosting",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 60
+                },
+                { "id": "sprinkles", "label": "Sprinkles", "priceDelta": 0.3, "caloriesDelta": 10 }
+            ],
+            "allergens": ["gluten", "milk", "eggs"]
+        },
+        {
+            "id": "lemon-cupcake",
+            "category": "pastry",
+            "title": "Lemon cupcake",
+            "description": "Bright citrus sponge",
+            "longDescription": "A pale, tender sponge shot through with lemon zest and a hidden pocket of lemon curd at the centre. Above it, a soft meringue swirl torched just until the peaks turn gold. Bright, sharp, and clean — the sort of cupcake that tastes like sunlight through a window.",
+            "price": 4.2,
+            "currency": "USD",
+            "image": "assets/images/deserts/lemon_cupcake.webp",
+            "alt": "Lemon cupcake",
+            "width": 1024,
+            "height": 1024,
+            "defaultSize": "single",
+            "sizes": [
+                {
+                    "id": "single",
+                    "label": "Single",
+                    "weight": "1 pc · 105 g",
+                    "priceDelta": 0,
+                    "calories": 280
+                },
+                {
+                    "id": "box4",
+                    "label": "Box of 4",
+                    "weight": "4 pcs · 420 g",
+                    "priceDelta": 11.0,
+                    "calories": 1120
+                },
+                {
+                    "id": "box6",
+                    "label": "Box of 6",
+                    "weight": "6 pcs · 630 g",
+                    "priceDelta": 17.4,
+                    "calories": 1680
+                }
+            ],
+            "extras": [
+                {
+                    "id": "lemon-zest",
+                    "label": "Extra lemon zest",
+                    "priceDelta": 0.4,
+                    "caloriesDelta": 2
+                },
+                {
+                    "id": "meringue-kiss",
+                    "label": "Meringue kiss",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": 40
+                },
+                {
+                    "id": "extra-cream",
+                    "label": "Extra frosting",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 60
+                }
+            ],
+            "allergens": ["gluten", "milk", "eggs"]
+        },
+        {
+            "id": "chocolate-cupcake",
+            "category": "pastry",
+            "title": "Chocolate cupcake",
+            "description": "Cocoa sponge and cream",
+            "longDescription": "A dark, damp cocoa sponge — almost brownie-like at the centre — under a tall swirl of chocolate ganache frosting. A pinch of sea salt on top keeps the sweetness in check. Rich, unapologetic, and best eaten with a small spoon to catch the crumbs.",
+            "price": 4.4,
+            "currency": "USD",
+            "image": "assets/images/deserts/shoko_cupcaje.webp",
+            "alt": "Chocolate cupcake",
+            "width": 1024,
+            "height": 1024,
+            "defaultSize": "single",
+            "sizes": [
+                {
+                    "id": "single",
+                    "label": "Single",
+                    "weight": "1 pc · 115 g",
+                    "priceDelta": 0,
+                    "calories": 340
+                },
+                {
+                    "id": "box4",
+                    "label": "Box of 4",
+                    "weight": "4 pcs · 460 g",
+                    "priceDelta": 11.2,
+                    "calories": 1360
+                },
+                {
+                    "id": "box6",
+                    "label": "Box of 6",
+                    "weight": "6 pcs · 690 g",
+                    "priceDelta": 18.4,
+                    "calories": 2040
+                }
+            ],
+            "extras": [
+                {
+                    "id": "chocolate-drizzle",
+                    "label": "Chocolate drizzle",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 70
+                },
+                {
+                    "id": "extra-cream",
+                    "label": "Extra frosting",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 60
+                },
+                {
+                    "id": "gold-flakes",
+                    "label": "Gold flakes",
+                    "priceDelta": 1.5,
+                    "caloriesDelta": 0
+                }
+            ],
+            "allergens": ["gluten", "milk", "eggs", "soy"]
+        },
+        {
+            "id": "pistachio-cookies",
+            "category": "pastry",
+            "title": "Pistachio cookies",
+            "description": "Raspberry and pistachio",
+            "longDescription": "Soft-baked cookies loaded with chopped pistachios and white chocolate, thumb-pressed and filled with a spoon of sharp raspberry jam. Nutty, chewy, and just tart enough to keep you reaching for the next one. Toasted pistachios scattered on top for crunch.",
+            "badge": "seasonal",
+            "price": 3.8,
+            "currency": "USD",
+            "image": "assets/images/deserts/cookies.webp",
+            "alt": "Pistachio cookies topped with raspberries and crushed nuts",
+            "width": 1152,
+            "height": 1152,
+            "defaultSize": "single",
+            "sizes": [
+                {
+                    "id": "single",
+                    "label": "Single",
+                    "weight": "1 pc · 70 g",
+                    "priceDelta": 0,
+                    "calories": 180
+                },
+                {
+                    "id": "box4",
+                    "label": "Box of 4",
+                    "weight": "4 pcs · 280 g",
+                    "priceDelta": 9.8,
+                    "calories": 720
+                },
+                {
+                    "id": "box8",
+                    "label": "Box of 8",
+                    "weight": "8 pcs · 560 g",
+                    "priceDelta": 21.8,
+                    "calories": 1440
+                }
+            ],
+            "extras": [
+                {
+                    "id": "white-choc-drizzle",
+                    "label": "White chocolate drizzle",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 70
+                },
+                {
+                    "id": "crushed-pistachio",
+                    "label": "Crushed pistachios",
+                    "priceDelta": 0.9,
+                    "caloriesDelta": 50
+                },
+                {
+                    "id": "raspberry-jam",
+                    "label": "Extra raspberry jam",
+                    "priceDelta": 0.6,
+                    "caloriesDelta": 40
+                }
+            ],
+            "packaging": [
+                { "id": "standard", "label": "Standard box", "priceDelta": 0, "caloriesDelta": 0 },
+                { "id": "gift", "label": "Gift tin", "priceDelta": 2.0, "caloriesDelta": 0 }
+            ],
+            "allergens": ["gluten", "milk", "eggs", "nuts"]
+        },
+        {
+            "id": "macarons",
+            "category": "pastry",
+            "title": "Macarons",
+            "description": "Light shells and ganache",
+            "longDescription": "Two crisp almond shells with a soft, chewy crumb inside, sandwiched around a silky ganache. Delicate, faintly nutty, and gone in three bites — which is exactly why they are sold in boxes. Best enjoyed at room temperature, with something bitter to drink.",
+            "badge": "signature",
+            "price": 4.6,
+            "currency": "USD",
+            "image": "assets/images/deserts/macaroons.webp",
+            "alt": "Macarons",
+            "width": 1024,
+            "height": 1024,
+            "defaultSize": "single",
+            "sizes": [
+                {
+                    "id": "single",
+                    "label": "Single",
+                    "weight": "1 pc · 20 g",
+                    "priceDelta": 0,
+                    "calories": 110
+                },
+                {
+                    "id": "box6",
+                    "label": "Box of 6",
+                    "weight": "6 pcs · 120 g",
+                    "priceDelta": 20.6,
+                    "calories": 660
+                },
+                {
+                    "id": "box12",
+                    "label": "Box of 12",
+                    "weight": "12 pcs · 240 g",
+                    "priceDelta": 43.4,
+                    "calories": 1320
+                }
+            ],
+            "extras": [
+                {
+                    "id": "chocolate-drizzle",
+                    "label": "Chocolate drizzle",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 70
+                },
+                {
+                    "id": "edible-flower",
+                    "label": "Edible flower",
+                    "priceDelta": 1.2,
+                    "caloriesDelta": 0
+                },
+                {
+                    "id": "extra-ganache",
+                    "label": "Extra ganache",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": 50
+                }
+            ],
+            "packaging": [
+                { "id": "standard", "label": "Standard box", "priceDelta": 0, "caloriesDelta": 0 },
+                { "id": "gift", "label": "Gift ribbon box", "priceDelta": 1.5, "caloriesDelta": 0 }
+            ],
+            "allergens": ["eggs", "milk", "nuts"]
+        },
+        {
+            "id": "shortbread",
+            "category": "pastry",
+            "title": "Shortbread",
+            "description": "Buttery and crumbly",
+            "longDescription": "Flour, butter, sugar — nothing else, and nothing to hide behind. Baked low until pale gold, then left to cool into that unmistakable sandy snap. Plain, honest, and quietly perfect next to a cup of black tea or strong coffee.",
+            "price": 3.4,
+            "currency": "USD",
+            "image": "assets/images/deserts/korzhiki.webp",
+            "alt": "Shortbread cookies",
+            "width": 1024,
+            "height": 1024,
+            "defaultSize": "single",
+            "sizes": [
+                {
+                    "id": "single",
+                    "label": "Single",
+                    "weight": "1 pc · 40 g",
+                    "priceDelta": 0,
+                    "calories": 120
+                },
+                {
+                    "id": "box6",
+                    "label": "Box of 6",
+                    "weight": "6 pcs · 240 g",
+                    "priceDelta": 15.2,
+                    "calories": 720
+                },
+                {
+                    "id": "box12",
+                    "label": "Box of 12",
+                    "weight": "12 pcs · 480 g",
+                    "priceDelta": 31.4,
+                    "calories": 1440
+                }
+            ],
+            "extras": [
+                {
+                    "id": "chocolate-dip",
+                    "label": "Chocolate dip",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 70
+                },
+                {
+                    "id": "cinnamon-sugar",
+                    "label": "Cinnamon sugar",
+                    "priceDelta": 0.2,
+                    "caloriesDelta": 10
+                },
+                { "id": "jam", "label": "Side of jam", "priceDelta": 0.6, "caloriesDelta": 40 }
+            ],
+            "allergens": ["gluten", "milk"]
+        },
+        {
+            "id": "profiteroles",
+            "category": "pastry",
+            "title": "Profiteroles",
+            "description": "Choux buns with cream",
+            "longDescription": "Small golden choux buns, crisp on the outside and hollow within, piped full of vanilla pastry cream. Served chilled, with a warm chocolate sauce poured over at the last moment so the tops glisten. A classic that never really went out of fashion.",
+            "price": 4.8,
+            "currency": "USD",
+            "image": "assets/images/deserts/profitroli.webp",
+            "alt": "Profiteroles",
+            "width": 1024,
+            "height": 1024,
+            "defaultSize": "single",
+            "sizes": [
+                {
+                    "id": "single",
+                    "label": "Portion of 3",
+                    "weight": "3 pcs · 90 g",
+                    "priceDelta": 0,
+                    "calories": 285
+                },
+                {
+                    "id": "box4",
+                    "label": "Box of 4",
+                    "weight": "4 pcs · 120 g",
+                    "priceDelta": 12.8,
+                    "calories": 380
+                },
+                {
+                    "id": "box8",
+                    "label": "Box of 8",
+                    "weight": "8 pcs · 240 g",
+                    "priceDelta": 28.8,
+                    "calories": 760
+                }
+            ],
+            "extras": [
+                {
+                    "id": "chocolate-sauce",
+                    "label": "Chocolate sauce",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 70
+                },
+                {
+                    "id": "caramel-sauce",
+                    "label": "Caramel sauce",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 70
+                },
+                {
+                    "id": "ice-cream",
+                    "label": "Vanilla ice cream scoop",
+                    "priceDelta": 1.5,
+                    "caloriesDelta": 140
+                }
+            ],
+            "packaging": [
+                { "id": "standard", "label": "Standard box", "priceDelta": 0, "caloriesDelta": 0 },
+                { "id": "gift", "label": "Gift box", "priceDelta": 1.5, "caloriesDelta": 0 }
+            ],
+            "allergens": ["gluten", "milk", "eggs", "soy"]
+        },
+        {
+            "id": "wafer-rolls",
+            "category": "pastry",
+            "title": "Wafer rolls",
+            "description": "Crisp tubes with filling",
+            "longDescription": "Thin wafer tubes rolled warm around a wooden form, cooled until they crackle, then filled with condensed-milk cream. Light, crisp, and dangerously easy to eat by the handful. A childhood classic that still tastes better than it should.",
+            "price": 3.9,
+            "currency": "USD",
+            "image": "assets/images/deserts/trubochki.webp",
+            "alt": "Wafer rolls",
+            "width": 1024,
+            "height": 1024,
+            "defaultSize": "single",
+            "sizes": [
+                {
+                    "id": "single",
+                    "label": "Single",
+                    "weight": "1 pc · 35 g",
+                    "priceDelta": 0,
+                    "calories": 85
+                },
+                {
+                    "id": "box5",
+                    "label": "Box of 5",
+                    "weight": "5 pcs · 175 g",
+                    "priceDelta": 13.6,
+                    "calories": 425
+                },
+                {
+                    "id": "box10",
+                    "label": "Box of 10",
+                    "weight": "10 pcs · 350 g",
+                    "priceDelta": 29.1,
+                    "calories": 850
+                }
+            ],
+            "extras": [
+                {
+                    "id": "powdered-sugar",
+                    "label": "Powdered sugar",
+                    "priceDelta": 0.2,
+                    "caloriesDelta": 10
+                },
+                {
+                    "id": "chocolate-dip",
+                    "label": "Chocolate dip",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 70
+                },
+                {
+                    "id": "condensed-milk",
+                    "label": "Extra condensed milk",
+                    "priceDelta": 0.5,
+                    "caloriesDelta": 60
+                }
+            ],
+            "allergens": ["gluten", "milk", "eggs"]
+        },
+        {
+            "id": "zephyr",
+            "category": "pastry",
+            "title": "Zephyr",
+            "description": "Soft fruit meringue",
+            "longDescription": "A cloud of apple pectin meringue, whipped until it holds its shape but still melts the moment it touches your tongue. Lightly dusted with powdered sugar — nothing more. Fat-free, gluten-free, and somehow still feels indulgent.",
+            "badge": "new",
+            "price": 3.7,
+            "currency": "USD",
+            "image": "assets/images/deserts/zefir.webp",
+            "alt": "Zephyr",
+            "width": 1024,
+            "height": 1024,
+            "defaultSize": "single",
+            "sizes": [
+                {
+                    "id": "single",
+                    "label": "Single",
+                    "weight": "1 pc · 45 g",
+                    "priceDelta": 0,
+                    "calories": 70
+                },
+                {
+                    "id": "box6",
+                    "label": "Box of 6",
+                    "weight": "6 pcs · 270 g",
+                    "priceDelta": 16.7,
+                    "calories": 420
+                },
+                {
+                    "id": "box12",
+                    "label": "Box of 12",
+                    "weight": "12 pcs · 540 g",
+                    "priceDelta": 34.7,
+                    "calories": 840
+                }
+            ],
+            "extras": [
+                {
+                    "id": "chocolate-drizzle",
+                    "label": "Chocolate drizzle",
+                    "priceDelta": 0.7,
+                    "caloriesDelta": 70
+                },
+                {
+                    "id": "berry-coulis",
+                    "label": "Berry coulis",
+                    "priceDelta": 0.8,
+                    "caloriesDelta": 40
+                },
+                {
+                    "id": "powdered-sugar",
+                    "label": "Extra powdered sugar",
+                    "priceDelta": 0.2,
+                    "caloriesDelta": 10
+                }
+            ],
+            "packaging": [
+                { "id": "standard", "label": "Standard box", "priceDelta": 0, "caloriesDelta": 0 },
+                { "id": "gift", "label": "Gift ribbon box", "priceDelta": 1.2, "caloriesDelta": 0 }
+            ],
+            "allergens": ["eggs"]
+        }
+    ]
+}
