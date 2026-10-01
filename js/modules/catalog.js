@@ -8,6 +8,30 @@ import '../../scss/pages/_catalog.scss';
 
 const menuGroups = [coffee, cakes, pastry];
 
+// Поля изображений в JSON — это обычные строки, поэтому Vite не обрабатывает их как статические ресурсы.
+// Необходимо выполнить импорт, чтобы при сборке они были обработаны корректно.
+const menuImages = import.meta.glob('../../assets/images/**/*.{webp,jpg,jpeg,png}', {
+    eager: true,
+    import: 'default',
+});
+
+const menuImageUrls = new Map(
+    Object.entries(menuImages).map(([file, url]) => {
+        const normalized = file.replaceAll('\\', '/');
+        const marker = 'assets/images/';
+        const start = normalized.indexOf(marker);
+        const relative = start === -1 ? normalized : normalized.slice(start);
+
+        return [relative, url];
+    }),
+);
+
+function resolveMenuImage(src) {
+    if (!src) return src;
+
+    return menuImageUrls.get(decodeURIComponent(src)) ?? src;
+}
+
 //---------------------------------------------------------------------------
 
 let rootElement;
@@ -77,7 +101,11 @@ function renderCards(grid) {
 
     menuGroups.forEach((group) => {
         group.items.forEach((item) => {
-            const card = new MenuItem({ ...item, category: group.category }).render();
+            const card = new MenuItem({
+                ...item,
+                category: group.category,
+                image: resolveMenuImage(item.image),
+            }).render();
             fragment.append(card);
         });
     });
