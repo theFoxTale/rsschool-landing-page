@@ -68,6 +68,10 @@
     }
 }
 
+.contacts__item:has(.contacts__link:hover) .contacts__icon {
+    color: var(--color-link-hover);
+}
+
 .contacts__link:focus-visible {
     outline: 2px solid var(--color-accent);
     outline-offset: 3px;
