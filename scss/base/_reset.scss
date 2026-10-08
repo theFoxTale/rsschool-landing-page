@@ -5,6 +5,12 @@
 }
 
 html {
-    scroll-behavior: smooth;
     scroll-padding-top: var(--header-height);
+
+    /* Когда панель бургер-меню закрыта и сдвинута за пределы экрана, она расширяет его и добавляет горизонтальный скролл. */
+    overflow-x: clip;
+}
+
+html.is-smooth {
+    scroll-behavior: smooth;
 }

@@ -9,6 +9,18 @@
     transition: background-color 0.3s ease;
 }
 
+/* Меню фиксирует body, и sticky-хедер уезжает вверх. Пока меню открыто, держим его у края экрана. */
+body.is-scroll-locked {
+    padding-top: var(--header-height);
+}
+
+body.is-scroll-locked .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
 .header__container {
     display: flex;
     justify-content: space-between;
@@ -61,7 +73,26 @@
 
 @include respond-to('768') {
     .header__nav {
-        display: none;
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: calc(100vh - var(--header-height));
+        padding: 20px;
+        background-color: var(--color-bg-main);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        touch-action: pan-y;
+        transform: translateX(100%);
+        visibility: hidden;
+        pointer-events: none;
+        transition:
+            transform 0.6s ease,
+            visibility 0.6s ease;
     }
 
     .burger {
@@ -69,15 +100,9 @@
     }
 
     .header__nav.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: var(--header-height);
-        left: 0;
-        width: 100%;
-        background-color: var(--color-bg-main);
-        padding: 20px;
-        box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+        transform: translateX(0);
+        visibility: visible;
+        pointer-events: auto;
     }
 
     .nav__list {
@@ -90,5 +115,11 @@
 @include respond-to('380') {
     .header__logo-text {
         font-size: 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .header__nav {
+        transition: none;
     }
 }

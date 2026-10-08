@@ -1,3 +1,5 @@
+**Язык:** [English](./README.md) | [Русский](./docs/README_ru.md)
+
 # ☕ [Morning in a Cup] — Landing Page
 
 [![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-0A66C2?style=flat&logo=githubpages&logoColor=white)](https://your-username.github.io/rsschool-landing-page/)
@@ -63,10 +65,22 @@ rsschool-landing-page/
 │   ├── themes/
 │   └── vendors/
 ├── js/
-│   ├── main.js             # Theme toggle, burger menu, smooth scroll
-│   ├── slider.js           # Custom carousel
-│   ├── catalog.js          # Category filtering & card rendering
-│   └── modal.js            # Modal window & option logic
+│   ├── classes/
+│   │   └── MenuItem.js     # Catalog card built from menu data
+│   ├── data/
+│   │   └── menu/
+│   │       ├── coffee.json # Coffee items
+│   │       ├── cakes.json  # Cake items
+│   │       └── pastry.json # Pastry items
+│   ├── modules/
+│   │   ├── main.js         # Shared styles; enables smooth scroll after load
+│   │   ├── theme.js        # Light and dark theme toggle
+│   │   ├── slider.js       # Drinks carousel
+│   │   ├── catalog.js      # Category filters and show more
+│   │   └── burger.js       # Burger menu and navigation
+│   └── pages/
+│       ├── home.js         # Home page entry
+│       └── catalog.js      # Menu page entry
 ├── assets/
 │   ├── fonts/              # Local woff2 font files
 │   ├── icons/              # SVG icons
@@ -75,7 +89,10 @@ rsschool-landing-page/
 ├── docs/
 │   ├── idea.jpg                # The image that inspired me for this project
 │   ├── README-part-1.md        # Part 1 description (markup & themes)
+│   ├── README-part-1-ru.md     # Part 1 description in Russian
 │   ├── README-part-2.md        # Part 2 description (interactivity)
+│   ├── README-part-2-ru.md     # Part 2 description in Russian
+│   └── README_ru.md            # Project README in Russian
 └── .gitignore
 ```
 
@@ -120,8 +137,8 @@ This repository follows the **Landing Page** assignment from the RS School Fulls
 
 - **Repository name:** `rsschool-landing-page` (personal public repo)
 - **Branch workflow:**  
-  `landing-page` → Part 1 (markup & themes)  
-  `landing-page-part-2` → Part 2 (interactivity)
+  `landing-page` → [Part 1 (markup & themes)](./docs/README-part-1.md)
+  `landing-page-part-2` → [Part 2 (interactivity)](./docs/README-part-2.md)
 - **Deployed via:** GitHub Pages
 - **Content in English**
 
